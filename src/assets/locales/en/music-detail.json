@@ -1,0 +1,10 @@
+{
+  "metaNotFoundTitle": "404 Page not found",
+  "metaNotFoundDescription": "404 Page not found",
+  "metaUnexpectedTitle": "Oops, unexpected error happened",
+  "infoNotFoundTitle": "404",
+  "infoNotFoundDescription": "Oops, music not found!",
+  "infoNotFoundActionText": "Back to Home",
+  "musicLyricTitle": "Lyric",
+  "musicVideoTitle": "Videos"
+}

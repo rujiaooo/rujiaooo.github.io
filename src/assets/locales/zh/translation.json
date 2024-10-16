@@ -1,0 +1,14 @@
+{
+  "supportLanguage": {
+    "Indonesian": "印度尼西亚",
+    "English": "英语",
+    "Mandarin": "华语"
+  },
+  "menuItemHome": "首页",
+  "menuItemMusic": "音乐",
+  "menuItemContact": "联系我们",
+  "footerQuoteText": "至少供印尼儒民，<br />余者供世民用，多或少，<br />可单独用。",
+  "errorActionText": "重试",
+  "errorCode": "1011",
+  "errorMessage": "发生意外错误"
+}
