@@ -68,7 +68,7 @@
     "source": "build",
     "destination": "snap-build",
     "skipThirdPartyRequests": true,
-    "port": 552,
+    "port": 3001,
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
