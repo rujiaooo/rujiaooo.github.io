@@ -1,4 +1,6 @@
 {
-  "metaTitle": "Music",
-  "metaDescription": "Perfect yourself with decency and music"
+    "metaTitle": "Music",
+    "metaDescription": "Perfect yourself with decency and music",
+    "musicNotFoundTitle": "Oops music not found",
+    "musicNotFoundDescription": "Please search with another keyword"
 }

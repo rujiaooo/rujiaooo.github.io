@@ -1,6 +1,10 @@
 {
-  "music": {
-    "name": "音乐",
-    "description": "用品德和音乐完善自己"
-  }
+    "music": {
+        "name": "音乐",
+        "description": "用品德和音乐完善自己"
+    },
+    "book": {
+        "name": "书",
+        "description": "學而時習之，不亦說乎？"
+    }
 }

@@ -1,4 +1,6 @@
 {
-  "metaTitle": "Musik",
-  "metaDescription": "Sempurnakanlah dirimu dengan kesusilaan dan musik"
+    "metaTitle": "Musik",
+    "metaDescription": "Sempurnakanlah dirimu dengan kesusilaan dan musik",
+    "musicNotFoundTitle": "Oops musik tidak ditemukan",
+    "musicNotFoundDescription": "Silahkan cari dengan kata kunci lainnya"
 }

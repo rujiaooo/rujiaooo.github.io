@@ -1,6 +1,6 @@
 {
-  "metaTitle": "404 Halaman tidak tersedia",
-  "errorCode": "404",
-  "errorMessage": "Halaman tidak tersedia",
-  "errorActionText": "Kembali"
+    "metaTitle": "404 Halaman tidak ditemukan",
+    "errorCode": "404",
+    "errorMessage": "Halaman tidak ditemukan",
+    "errorActionText": "Kembali"
 }

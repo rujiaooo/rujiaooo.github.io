@@ -1,14 +1,17 @@
 {
-  "supportLanguage": {
-    "Indonesian": "Indonesian",
-    "English": "English",
-    "Mandarin": "Mandarin"
-  },
-  "menuItemHome": "Home",
-  "menuItemMusic": "Music",
-  "menuItemContact": "Contact",
-  "footerQuoteText": "Dedicated for Ru people (儒) in Indonesia. <br />Furthermore, can be used by the world citizen; <br />More or less can be used alone.",
-  "errorActionText": "Try again",
-  "errorCode": "1011",
-  "errorMessage": "Unexpected error happened"
+    "supportLanguage": {
+        "Indonesian": "Indonesian",
+        "English": "English",
+        "Mandarin": "Mandarin"
+    },
+    "menuItem": {
+        "home": "Home",
+        "music": "Music",
+        "book": "Book",
+        "contact": "Contact"
+    },
+    "footerQuoteText": "Dedicated for Ru people (儒) in Indonesia. <br />Furthermore, can be used by the world citizen; <br />More or less can be used alone.",
+    "errorActionText": "Try again",
+    "errorCode": "1011",
+    "errorMessage": "Unexpected error happened"
 }

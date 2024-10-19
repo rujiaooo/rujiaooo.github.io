@@ -44,6 +44,7 @@ export default function Music(props: MusicProps): React.JSX.Element {
   const {
     lng
   } = props
+  const lngTo = lng === undefined ? "" : `/${lng}`
   const { translate } = useTranslator({
     lng,
     ns: ["music", "musics"]
@@ -123,13 +124,13 @@ export default function Music(props: MusicProps): React.JSX.Element {
     <>
       <Meta>
         {{
-          title: translate(`home:metaTitle`, { ns: ["home"] }),
-          description: translate(`home:metaDescription`, { ns: ["home"] })
+          title: translate(`music:metaTitle`, { ns: ["music"] }),
+          description: translate(`music:metaDescription`, { ns: ["music"] })
         }}
       </Meta>
 
       <div className="py-5 md:py-10">
-        <Container size="lg">
+        <Container size="xl">
           <div className="flex flex-col gap-4">
             <div className="shadow rounded-md border-1 bg-white">
               <div className="flex flex-row flex-wrap gap-2 justify-center items-center">
@@ -154,12 +155,12 @@ export default function Music(props: MusicProps): React.JSX.Element {
                   {{
                     header: <>
                       <p className="font-bold text-xl">
-                        Oops music not found
+                        {translate(`music:musicNotFoundTitle`, { ns: ["music"] })}
                       </p>
                     </>,
                     content: <>
                       <p className="text-lg">
-                        Please search with another keyword
+                        {translate(`music:musicNotFoundDescription`, { ns: ["music"] })}
                       </p>
                     </>
                   }}
@@ -176,10 +177,10 @@ export default function Music(props: MusicProps): React.JSX.Element {
                       <React.Fragment key={`music-item-${i}`}>
                         <div className="col-span-12 md:col-span-6 lg:col-span-4">
                           <div onClick={() => {
-                            navigate(`/music/${music.slug}`)
+                            navigate(`${lngTo}/music/${music.slug}`)
                           }}
                             className="w-full h-full cursor-pointer shadow rounded-md border-1 bg-white p-4">
-                            <Link to={`/music/${music.slug}`}
+                            <Link to={`${lngTo}/music/${music.slug}`}
                               className="font-semibold text-2xl text-confucius-black">
                               {music.title}
                             </Link>
