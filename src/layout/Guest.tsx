@@ -16,11 +16,15 @@ export default function Guest(): React.JSX.Element {
         logoImage={`/image/confucius-logo.png`}
         menuItems={[
           {
-            content: translate("menuItemMusic", { lng }),
+            content: translate("menuItem.music", { lng }),
             to: `/${lng}/music`
           },
           {
-            content: translate("menuItemContact", { lng }),
+            content: translate("menuItem.book", { lng }),
+            to: `/${lng}/book`
+          },
+          {
+            content: translate("menuItem.contact", { lng }),
             to: `/${lng}/contact`
           }
         ]}

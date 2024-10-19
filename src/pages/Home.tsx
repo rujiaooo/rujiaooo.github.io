@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useNavigate } from "react-router-dom"
-import { FaMusic } from "react-icons/fa"
+import { FaMusic, FaBook } from "react-icons/fa"
 import { Container } from "../components/Container"
 import { Meta } from "../components/Meta"
 import { Link } from "../components/Router"
@@ -25,7 +25,12 @@ export default function Home(props: HomeProps): React.JSX.Element {
   const [menu] = React.useState({
     items: [
       {
-        slug: "music"
+        slug: "music",
+        icon: <FaMusic className="w-16 h-16" aria-hidden="true" />
+      },
+      {
+        slug: "book",
+        icon: <FaBook className="w-16 h-16" aria-hidden="true" />
       }
     ]
   })
@@ -44,18 +49,19 @@ export default function Home(props: HomeProps): React.JSX.Element {
 
       <div className="py-5 md:py-10">
         <Container size="lg">
-          <div className="grid grid-cols-12 gap-4">
+          <div className="grid grid-cols-12 gap-4 auto-rows-fr">
             {
               menu.items.map((item, i: number) => {
                 return (
                   <React.Fragment key={`menu-item-${i}`}>
                     <div className="col-span-12 md:col-span-6 lg:col-span-4">
-                      <div onClick={() => { navigate(`${lngTo}/music`) }}
-                        className="cursor-pointer min-h-24 shadow rounded-md border-1 bg-white px-6 xl:px-12 py-6">
+                      <div onClick={() => { navigate(`${lngTo}/${item.slug}`) }}
+                        className="w-full h-full cursor-pointer min-h-24 shadow rounded-md border-1 bg-white px-6 xl:px-12 py-6">
                         <div className="flex flex-col justify-center items-center gap-4">
-                          <FaMusic className="w-16 h-16" aria-hidden="true" />
+                          {item.icon}
+
                           <div className="flex flex-col justify-center items-center">
-                            <Link className="text-2xl font-semibold" to={`${lngTo}/music`}>
+                            <Link className="text-2xl font-semibold" to={`${lngTo}/${item.slug}`}>
                               {translate(`menus:${item.slug}.name`, { ns: ["menus"] })}
                             </Link>
                             <p className="text-lg text-center italic">

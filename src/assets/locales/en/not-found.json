@@ -1,6 +1,6 @@
 {
-  "metaTitle": "404 Page not found",
-  "errorCode": "404",
-  "errorMessage": "Page not found",
-  "errorActionText": "Back to Home"
+    "metaTitle": "404 Page not found",
+    "errorCode": "404",
+    "errorMessage": "Page not found",
+    "errorActionText": "Back to Home"
 }

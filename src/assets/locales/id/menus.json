@@ -1,6 +1,10 @@
 {
-  "music": {
-    "name": "Musik",
-    "description": "Sempurnakanlah dirimu dengan kesusilaan dan musik"
-  }
+    "music": {
+        "name": "Musik",
+        "description": "Sempurnakanlah dirimu dengan kesusilaan dan musik"
+    },
+    "book": {
+        "name": "Buku",
+        "description": "Belajar dan selalu dilatih tidakkah itu menyenangkan?"
+    }
 }

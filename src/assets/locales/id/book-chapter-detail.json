@@ -3,8 +3,6 @@
     "metaNotFoundDescription": "404 Halaman tidak ditemukan",
     "metaUnexpectedTitle": "Oops, galat tidak terduga",
     "infoNotFoundTitle": "404",
-    "infoNotFoundDescription": "Oops, musik tidak ditemukan",
-    "infoNotFoundActionText": "Kembali Beranda",
-    "musicLyricTitle": "Lirik",
-    "musicVideoTitle": "Video"
+    "infoNotFoundDescription": "Oops, bagian buku tidak ditemukan",
+    "infoNotFoundActionText": "Kembali Beranda"
 }

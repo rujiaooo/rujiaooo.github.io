@@ -19,7 +19,8 @@ initTranslator({
   fallbackLng: "id",
   supportedLngs: lngs,
   defaultNS: [
-    "translation", "menus", "musics"
+    "translation", "menus", 
+    "musics", "books"
   ],
   resources
 })

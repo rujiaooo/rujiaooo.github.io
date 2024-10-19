@@ -1,4 +1,6 @@
 {
-  "metaTitle": "音乐",
-  "metaDescription": "用品德和音乐完善自己"
+    "metaTitle": "音乐",
+    "metaDescription": "用品德和音乐完善自己",
+    "musicNotFoundTitle": "糟糕，找不到音乐",
+    "musicNotFoundDescription": "请用其他关键词搜索"
 }

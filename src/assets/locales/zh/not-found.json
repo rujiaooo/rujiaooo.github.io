@@ -1,6 +1,6 @@
 {
-  "metaTitle": "404 找不到网页",
-  "errorCode": "404",
-  "errorMessage": "找不到网页",
-  "errorActionText": "返回首页"
+    "metaTitle": "404 找不到网页",
+    "errorCode": "404",
+    "errorMessage": "找不到网页",
+    "errorActionText": "返回首页"
 }

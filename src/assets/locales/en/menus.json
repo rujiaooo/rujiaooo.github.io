@@ -1,6 +1,10 @@
 {
-  "music": {
-    "name": "Music",
-    "description": "Complete yourself with decency and music"
-  }
+    "music": {
+        "name": "Music",
+        "description": "Complete yourself with decency and music"
+    },
+    "book": {
+        "name": "Book",
+        "description": "Is it not pleasant to learn with a constant perseverance and application?"
+    }
 }
