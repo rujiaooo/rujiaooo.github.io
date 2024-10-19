@@ -9,7 +9,7 @@ import Music from "../../pages/Music"
 import MusicDetail from "../../pages/MusicDetail"
 import Book from "../../pages/Book"
 import BookDetail from "../../pages/BookDetail"
-import ChapterDetail from "../../pages/ChapterDetail"
+import BookChapterDetail from "../../pages/BookChapterDetail"
 import NotFound from "../../pages/NotFound"
 import Error from "../../pages/Error"
 import { lngs } from "../../assets/locales"
@@ -21,7 +21,7 @@ const guests: RouteProps[] = [
   { path: "/music/:slug", element: <MusicDetail /> },
   { path: "/book", element: <Book /> },
   { path: "/book/:slug", element: <BookDetail /> },
-  { path: "/book/:book/:slug", element: <ChapterDetail /> },
+  { path: "/book/:book/:slug", element: <BookChapterDetail /> },
   { path: "*", element: <NotFound /> }
 ]
 
@@ -32,7 +32,7 @@ lngs.map((lng) => {
   guests.push({ path: `/${lng}/music/:slug`, element: <MusicDetail lng={lng} /> })
   guests.push({ path: `/${lng}/book`, element: <Book lng={lng} /> })
   guests.push({ path: `/${lng}/book/:slug`, element: <BookDetail lng={lng} /> })
-  guests.push({ path: `/${lng}/book/:book/:slug`, element: <ChapterDetail lng={lng} /> })
+  guests.push({ path: `/${lng}/book/:book/:slug`, element: <BookChapterDetail lng={lng} /> })
   guests.push({ path: `/${lng}/*`, element: <NotFound lng={lng} /> })
 })
 

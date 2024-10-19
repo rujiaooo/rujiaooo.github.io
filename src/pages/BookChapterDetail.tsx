@@ -8,7 +8,7 @@ import { useTranslator } from "../features/Translation"
 import { BookService } from "../services/static/Book"
 import { Status, StatusCode } from "../services/Status"
 
-type ChapterDetailProps = {
+type BookChapterDetailProps = {
   lng?: string
 }
 
@@ -29,7 +29,7 @@ type Chapter = {
 
 const bookService = new BookService()
 
-export default function ChapterDetail(props: ChapterDetailProps): React.JSX.Element {
+export default function BookChapterDetail(props: BookChapterDetailProps): React.JSX.Element {
   const {
     lng
   } = props
