@@ -15,17 +15,20 @@ import {
 } from "../Status"
 import bookSources from "../../assets/data/books.json"
 import xiaojingSources from "../../assets/data/xiaojing.json"
+import daxueSources from "../../assets/data/daxue.json"
 
 type BookItem = {
   slug: string
   name: string
   description?: string
+  icon?: string
 }
 
 type Book = {
   slug: string
   name: string
   description?: string
+  icon?: string
   chapters: Chapter[]
 }
 
@@ -35,6 +38,15 @@ type Chapter = {
   description?: string
   content?: string
   summary?: string
+  sections: Section[]
+}
+
+type Section = {
+  slug: string
+  title: string
+  description?: string
+  content?: string
+  note?: string
 }
 
 export class BookService {
@@ -50,9 +62,26 @@ export class BookService {
       return {
         slug: chapter.slug,
         title: chapter.title,
-        description: chapter.description || undefined,
+        description: chapter.description ? he.decode(chapter.description) : undefined,
         content: chapter.content ? he.decode(chapter.content) : undefined,
         summary: chapter.summary ? he.decode(chapter.summary) : undefined,
+        sections: []
+      }
+    }))
+    chapters.set("daxue", daxueSources.chapters.map((chapter) => {
+      return {
+        slug: chapter.slug,
+        title: chapter.title,
+        description: chapter.description ? he.decode(chapter.description) : undefined,
+        content: chapter.content ? he.decode(chapter.content) : undefined,
+        summary: chapter.summary ? he.decode(chapter.summary) : undefined,
+        sections: chapter.sections.map((section) => {
+          return {
+            ...section,
+            description: section.description ? he.decode(section.description) : undefined,
+            content: section.content ? he.decode(section.content) : undefined,
+          }
+        })
       }
     }))
 
@@ -61,6 +90,7 @@ export class BookService {
         slug: book.slug,
         name: book.name,
         description: book.description ? he.decode(book.description) : undefined,
+        icon: book.icon || undefined,
         chapters: chapters.has(book.slug) ? chapters.get(book.slug)! : []
       }
     })
@@ -96,7 +126,7 @@ export class BookService {
             return {
               ...book,
               name: this.translator.translate(`books:${book.slug}.name`, { lng, ns: ["books"] }),
-              description: this.translator.translate(`books:${book.slug}.description`, { lng, ns: ["books"] }),
+              description: he.decode(this.translator.translate(`books:${book.slug}.description`, { lng, ns: ["books"] })),
             }
           })
         }
@@ -130,13 +160,13 @@ export class BookService {
         data: {
           ...book,
           name: this.translator.translate(`books:${book.slug}.name`, { lng, ns: ["books"] }),
-          description: this.translator.translate(`books:${book.slug}.description`, { lng, ns: ["books"] }),
+          description: he.decode(this.translator.translate(`books:${book.slug}.description`, { lng, ns: ["books"] })),
           chapters: book.chapters.map((chapter) => {
             return {
               ...chapter,
               title: this.translator.translate(`${book.slug}:chapters.${chapter.slug}.title`, { lng, ns: [book.slug] }),
               description: chapter.description ?
-                this.translator.translate(`${book.slug}:chapters.${chapter.slug}.description`, { lng, ns: [book.slug] }) :
+                he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.description`, { lng, ns: [book.slug] })) :
                 undefined,
               content: chapter.content ?
                 he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.content`, { lng, ns: [book.slug] })) :
@@ -144,6 +174,17 @@ export class BookService {
               summary: chapter.summary ?
                 he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.summary`, { lng, ns: [book.slug] })) :
                 undefined,
+              sections: chapter.sections.map((section) => {
+                return {
+                  ...section,
+                  description: section.description ?
+                    he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.description`, { lng, ns: [book.slug] })) :
+                    undefined,
+                  content: section.content ?
+                    he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.content`, { lng, ns: [book.slug] })) :
+                    undefined,
+                }
+              })
             }
           })
         }
@@ -188,7 +229,7 @@ export class BookService {
           ...chapter,
           title: this.translator.translate(`${book.slug}:chapters.${chapter.slug}.title`, { lng, ns: [book.slug] }),
           description: chapter.description ?
-            this.translator.translate(`${book.slug}:chapters.${chapter.slug}.description`, { lng, ns: [book.slug] }) :
+            he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.description`, { lng, ns: [book.slug] })) :
             undefined,
           content: chapter.content ?
             he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.content`, { lng, ns: [book.slug] })) :
@@ -199,8 +240,19 @@ export class BookService {
           book: {
             ...book,
             name: this.translator.translate(`books:${book.slug}.name`, { lng, ns: ["books"] }),
-            description: this.translator.translate(`books:${book.slug}.description`, { lng, ns: ["books"] }),
-          }
+            description: he.decode(this.translator.translate(`books:${book.slug}.description`, { lng, ns: ["books"] })),
+          },
+          sections: chapter.sections.map((section) => {
+            return {
+              ...section,
+              description: section.description ?
+                he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.description`, { lng, ns: [book.slug] })) :
+                undefined,
+              content: section.content ?
+                he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.content`, { lng, ns: [book.slug] })) :
+                undefined,
+            }
+          })
         }
       }
     } catch (err: unknown) {

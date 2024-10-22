@@ -71,12 +71,14 @@ type GetBookChapterData = {
   description?: string
   content?: string
   summary?: string
+  sections: Section[]
 }
 
 type Book = {
   slug: string
   name: string
   description?: string
+  icon?: string
 }
 
 type Chapter = {
@@ -85,4 +87,13 @@ type Chapter = {
   description?: string
   content?: string
   summary?: string
+  sections: Section[]
+}
+
+type Section = {
+  slug: string
+  title: string
+  description?: string
+  content?: string
+  note?: string
 }

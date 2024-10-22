@@ -2,5 +2,9 @@
     "xiaojing": {
         "name": "Xiaojing",
         "description": "The Classic of Filial Piety"
+    },
+    "daxue": {
+        "name": "Da Xue",
+        "description": "The Great Learning of Confucius"
     }
 }

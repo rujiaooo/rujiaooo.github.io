@@ -9,6 +9,7 @@ import idBooks from "./id/books.json"
 import idBookDetail from "./id/book-detail.json"
 import idBookChapterDetail from "./id/book-chapter-detail.json"
 import idXiaojing from "./id/xiaojing.json"
+import idDaxue from "./id/daxue.json"
 import idNotFound from "./id/not-found.json"
 import idComingSoon from "./id/coming-soon.json"
 import idTranslation from "./id/translation.json"
@@ -24,6 +25,7 @@ import enBooks from "./en/books.json"
 import enBookDetail from "./en/book-detail.json"
 import enBookChapterDetail from "./en/book-chapter-detail.json"
 import enXiaojing from "./en/xiaojing.json"
+import enDaxue from "./en/daxue.json"
 import enNotFound from "./en/not-found.json"
 import enComingSoon from "./en/coming-soon.json"
 import enTranslation from "./en/translation.json"
@@ -39,6 +41,7 @@ import zhBooks from "./zh/books.json"
 import zhBookDetail from "./zh/book-detail.json"
 import zhBookChapterDetail from "./zh/book-chapter-detail.json"
 import zhXiaojing from "./zh/xiaojing.json"
+import zhDaxue from "./zh/daxue.json"
 import zhNotFound from "./zh/not-found.json"
 import zhComingSoon from "./zh/coming-soon.json"
 import zhTranslation from "./zh/translation.json"
@@ -58,6 +61,7 @@ export const resources = {
     "book-detail": idBookDetail,
     "book-chapter-detail": idBookChapterDetail,
     "xiaojing": idXiaojing,
+    "daxue": idDaxue,
     "not-found": idNotFound,
     "coming-soon": idComingSoon,
     "translation": idTranslation,
@@ -74,6 +78,7 @@ export const resources = {
     "book-detail": enBookDetail,
     "book-chapter-detail": enBookChapterDetail,
     "xiaojing": enXiaojing,
+    "daxue": enDaxue,
     "not-found": enNotFound,
     "coming-soon": enComingSoon,
     "translation": enTranslation,
@@ -90,6 +95,7 @@ export const resources = {
     "book-detail": zhBookDetail,
     "book-chapter-detail": zhBookChapterDetail,
     "xiaojing": zhXiaojing,
+    "daxue": zhDaxue,
     "not-found": zhNotFound,
     "coming-soon": zhComingSoon,
     "translation": zhTranslation,

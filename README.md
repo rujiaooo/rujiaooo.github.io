@@ -36,10 +36,17 @@
 - `/snap-build` (prerender build)
 
 ## Todos
-Nothing to do right now
+1. Add navigation
+2. Multilingual page detail view
 
 ## Nice to Have
 Nothing to have right now
 
 ## Issues
 No issues right now
+
+## References:
+1. MATAKIN
+2. https://ctext.org/
+3. http://wengu.tartarie.com/wg/wengu.php
+4. http://nothingistic.org/library/confucius/

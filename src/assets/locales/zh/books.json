@@ -2,5 +2,9 @@
     "xiaojing": {
         "name": "Xiaojing",
         "description": "孝經"
+    },
+    "daxue": {
+        "name": "Da Xue",
+        "description": "大学"
     }
 }

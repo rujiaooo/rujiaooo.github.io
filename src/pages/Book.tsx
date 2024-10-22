@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useNavigate } from "react-router-dom"
-import { GoPeople } from "react-icons/go"
 import { Alert } from "../components/Alert"
 import { Container } from "../components/Container"
 import { Meta } from "../components/Meta"
@@ -17,6 +16,7 @@ type BookProps = {
 type Book = {
   slug: string
   name: string
+  icon?: string
   description?: string
 }
 
@@ -123,7 +123,10 @@ export default function Book(props: BookProps): React.JSX.Element {
                           <div onClick={() => { navigate(`${lngTo}/book/${book.slug}`) }}
                             className="w-full h-full cursor-pointer min-h-24 shadow rounded-md border-1 bg-white px-6 xl:px-12 py-6">
                             <div className="flex flex-col justify-center items-center gap-4">
-                              <GoPeople className="w-16 h-16" aria-hidden="true" />
+                              {
+                                book.icon &&
+                                <img src={book.icon} alt="book" className="w-16 h-16" />
+                              }
 
                               <div className="flex flex-col justify-center items-center">
                                 <Link className="text-2xl font-semibold" to={`${lngTo}/book/${book.slug}`}>
