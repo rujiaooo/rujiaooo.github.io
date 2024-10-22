@@ -2,6 +2,13 @@
     {
         "slug": "xiaojing",
         "name": "Xiaojing",
-        "description": "Kitab Bakti"
+        "description": "Kitab Bakti",
+        "icon": "/image/xiaojing-icon.svg"
+    },
+    {
+        "slug": "daxue",
+        "name": "Da Xue",
+        "description": "Kitab Ajaran Besar",
+        "icon": "/image/daxue-icon.svg"
     }
 ]

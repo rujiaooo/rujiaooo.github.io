@@ -25,6 +25,15 @@ type Chapter = {
   content?: string
   summary?: string
   book: Book
+  sections: Section[]
+}
+
+type Section = {
+  slug: string
+  title: string
+  description?: string
+  content?: string
+  note?: string
 }
 
 const bookService = new BookService()
@@ -160,12 +169,39 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                   </div>
                 </div>
 
-                <div className="border rounded-md shadow p-4"
-                  dangerouslySetInnerHTML={{
-                    __html: chapter.detail?.content || ""
-                  }}>
+                {
+                  chapter.detail?.content &&
+                  <div className="border rounded-md shadow p-4"
+                    dangerouslySetInnerHTML={{
+                      __html: chapter.detail?.content || ""
+                    }}>
 
-                </div>
+                  </div>
+                }
+
+                {
+                  chapter.detail?.sections && chapter.detail?.sections.length > 0 &&
+                  <div className="border rounded-md shadow p-4">
+                    <ol className="flex flex-col gap-2 list-[upper-roman] list-outside pl-10">
+                      {
+                        chapter.detail.sections.map((section, i: number) => {
+                          return (
+                            <React.Fragment key={`section-${i}`}>
+                              <li id={section.slug}>
+                                <div dangerouslySetInnerHTML={{
+                                  __html: section.content || ""
+                                }}>
+
+                                </div>
+                              </li>
+                            </React.Fragment>
+                          )
+                        })
+                      }
+                    </ol>
+                  </div>
+                }
+
               </div>
             </Container>
           </div>

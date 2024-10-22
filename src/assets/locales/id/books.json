@@ -2,5 +2,9 @@
     "xiaojing": {
         "name": "Xiaojing",
         "description": "Kitab Bakti"
+    },
+    "daxue": {
+        "name": "Da Xue",
+        "description": "Kitab Ajaran Besar"
     }
 }

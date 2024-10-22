@@ -25,13 +25,13 @@ export default function Home(props: HomeProps): React.JSX.Element {
   const [menu] = React.useState({
     items: [
       {
+        slug: "book",
+        icon: <FaBook className="w-16 h-16" aria-hidden="true" />
+      },
+      {
         slug: "music",
         icon: <FaMusic className="w-16 h-16" aria-hidden="true" />
       },
-      {
-        slug: "book",
-        icon: <FaBook className="w-16 h-16" aria-hidden="true" />
-      }
     ]
   })
 
