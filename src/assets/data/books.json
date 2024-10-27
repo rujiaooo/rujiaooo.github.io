@@ -10,5 +10,11 @@
         "name": "Da Xue",
         "description": "Kitab Ajaran Besar",
         "icon": "/image/daxue-icon.svg"
+    },
+    {
+        "slug": "zhongyong",
+        "name": "Zhong Yong",
+        "description": "Kitab Tengah Sempurna",
+        "icon": "/image/zhongyong-icon.svg"
     }
 ]

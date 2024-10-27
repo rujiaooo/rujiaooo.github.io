@@ -6,5 +6,9 @@
     "daxue": {
         "name": "Da Xue",
         "description": "大学"
+    },
+    "zhongyong": {
+        "name": "Zhong Yong",
+        "description": "中庸"
     }
 }

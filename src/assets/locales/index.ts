@@ -10,6 +10,7 @@ import idBookDetail from "./id/book-detail.json"
 import idBookChapterDetail from "./id/book-chapter-detail.json"
 import idXiaojing from "./id/xiaojing.json"
 import idDaxue from "./id/daxue.json"
+import idZhongyong from "./id/zhongyong.json"
 import idNotFound from "./id/not-found.json"
 import idComingSoon from "./id/coming-soon.json"
 import idTranslation from "./id/translation.json"
@@ -26,6 +27,7 @@ import enBookDetail from "./en/book-detail.json"
 import enBookChapterDetail from "./en/book-chapter-detail.json"
 import enXiaojing from "./en/xiaojing.json"
 import enDaxue from "./en/daxue.json"
+import enZhongyong from "./en/zhongyong.json"
 import enNotFound from "./en/not-found.json"
 import enComingSoon from "./en/coming-soon.json"
 import enTranslation from "./en/translation.json"
@@ -42,6 +44,7 @@ import zhBookDetail from "./zh/book-detail.json"
 import zhBookChapterDetail from "./zh/book-chapter-detail.json"
 import zhXiaojing from "./zh/xiaojing.json"
 import zhDaxue from "./zh/daxue.json"
+import zhZhongyong from "./zh/zhongyong.json"
 import zhNotFound from "./zh/not-found.json"
 import zhComingSoon from "./zh/coming-soon.json"
 import zhTranslation from "./zh/translation.json"
@@ -62,6 +65,7 @@ export const resources = {
     "book-chapter-detail": idBookChapterDetail,
     "xiaojing": idXiaojing,
     "daxue": idDaxue,
+    "zhongyong": idZhongyong,
     "not-found": idNotFound,
     "coming-soon": idComingSoon,
     "translation": idTranslation,
@@ -79,6 +83,7 @@ export const resources = {
     "book-chapter-detail": enBookChapterDetail,
     "xiaojing": enXiaojing,
     "daxue": enDaxue,
+    "zhongyong": enZhongyong,
     "not-found": enNotFound,
     "coming-soon": enComingSoon,
     "translation": enTranslation,
@@ -96,6 +101,7 @@ export const resources = {
     "book-chapter-detail": zhBookChapterDetail,
     "xiaojing": zhXiaojing,
     "daxue": zhDaxue,
+    "zhongyong": zhZhongyong,
     "not-found": zhNotFound,
     "coming-soon": zhComingSoon,
     "translation": zhTranslation,
