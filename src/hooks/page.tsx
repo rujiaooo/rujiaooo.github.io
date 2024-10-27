@@ -35,7 +35,7 @@ export function usePage(props?: PageProps) {
   function getLng(lngs: string[]): string | undefined {
     let res = undefined
     for (const lng of lngs) {
-      if (pathname.indexOf(`/${lng}`) !== -1) {
+      if (pathname.startsWith(`/${lng}/`)) {
         res = lng
         break
       }
