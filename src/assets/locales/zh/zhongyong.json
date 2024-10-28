@@ -2,7 +2,7 @@
     "chapters": {
         "i": {
             "title": "Chapter I",
-            "description": "",
+            "description": "整个作品的总和",
             "content": "",
             "summary": "",
             "sections": {
@@ -35,7 +35,7 @@
         },
         "ii": {
             "title": "Chapter II",
-            "description": "",
+            "description": "只有君子才能遵循中庸，小人总是违背中庸。",
             "content": "",
             "summary": "",
             "sections": {
@@ -53,7 +53,7 @@
         },
         "iii": {
             "title": "Chapter III",
-            "description": "",
+            "description": "在孔子的时代，中庸之道的实践早已存在，这是一种罕见现象。",
             "content": "",
             "summary": "",
             "sections": {
@@ -66,7 +66,7 @@
         },
         "iv": {
             "title": "Chapter IV",
-            "description": "",
+            "description": "为什么很少有人能够践行中庸呢？",
             "content": "",
             "summary": "",
             "sections": {
@@ -84,7 +84,7 @@
         },
         "v": {
             "title": "Chapter V",
-            "description": "",
+            "description": "中庸之道无人践踏",
             "content": "",
             "summary": "",
             "sections": {
@@ -97,7 +97,7 @@
         },
         "vi": {
             "title": "Chapter VI",
-            "description": "",
+            "description": "舜怎样追求中庸之道。",
             "content": "",
             "summary": "",
             "sections": {
@@ -110,7 +110,7 @@
         },
         "vii": {
             "title": "Chapter VII",
-            "description": "",
+            "description": "他们的相反行为表明人们不了解中庸之道和本质。",
             "content": "",
             "summary": "",
             "sections": {
@@ -123,7 +123,7 @@
         },
         "viii": {
             "title": "Chapter VIII",
-            "description": "",
+            "description": "回族如何坚守中庸之道。",
             "content": "",
             "summary": "",
             "sections": {
@@ -136,7 +136,7 @@
         },
         "ix": {
             "title": "Chapter IX",
-            "description": "",
+            "description": "中庸之道的实现十分困难。",
             "content": "",
             "summary": "",
             "sections": {
@@ -149,7 +149,7 @@
         },
         "x": {
             "title": "Chapter X",
-            "description": "",
+            "description": "On energy in its relation to the Mean.",
             "content": "",
             "summary": "",
             "sections": {
@@ -182,7 +182,7 @@
         },
         "xi": {
             "title": "Chapter XI",
-            "description": "",
+            "description": "只有圣人才能达到中庸的要求。",
             "content": "",
             "summary": "",
             "sections": {
@@ -205,7 +205,7 @@
         },
         "xii": {
             "title": "Chapter XII",
-            "description": "",
+            "description": "中庸之道虽然广泛，但依然隐秘。",
             "content": "",
             "summary": "",
             "sections": {
@@ -233,7 +233,7 @@
         },
         "xiii": {
             "title": "Chapter XIII",
-            "description": "",
+            "description": "中庸之道并不难求，每个人都有自己的道理，只要真诚地去追求它就行了。",
             "content": "",
             "summary": "",
             "sections": {
@@ -261,7 +261,7 @@
         },
         "xiv": {
             "title": "Chapter XIV",
-            "description": "",
+            "description": "君子如何在各种不同的处境中追求中庸，做正确的事，并在自身中找到规则。",
             "content": "",
             "summary": "",
             "sections": {
@@ -294,7 +294,7 @@
         },
         "xv": {
             "title": "Chapter XV",
-            "description": "",
+            "description": "中庸的修行是循序渐进的。",
             "content": "",
             "summary": "",
             "sections": {
@@ -317,7 +317,7 @@
         },
         "xvi": {
             "title": "Chapter XVI",
-            "description": "",
+            "description": "从精神存在的运作和影响来说明中庸之道。",
             "content": "",
             "summary": "",
             "sections": {
@@ -350,7 +350,7 @@
         },
         "xvii": {
             "title": "Chapter XVII",
-            "description": "",
+            "description": "孝道的美德，在舜身上得到了最高体现，并得到了上天的奖赏。",
             "content": "",
             "summary": "",
             "sections": {
@@ -383,7 +383,7 @@
         },
         "xviii": {
             "title": "Chapter XVIII",
-            "description": "",
+            "description": "论万王、武王、周公。",
             "content": "",
             "summary": "",
             "sections": {
@@ -406,7 +406,7 @@
         },
         "xix": {
             "title": "Chapter XIX",
-            "description": "",
+            "description": "武王和周公的孝道十分深远。",
             "content": "",
             "summary": "",
             "sections": {
@@ -444,7 +444,7 @@
         },
         "xx": {
             "title": "Chapter XX",
-            "description": "",
+            "description": "关于政府：主要说明政府如何取决于管理政府的官员的性格，以及政府如何取决于君主本人的性格。",
             "content": "",
             "summary": "",
             "sections": {
@@ -557,7 +557,7 @@
         },
         "xxi": {
             "title": "Chapter XXI",
-            "description": "",
+            "description": "真诚与智慧的相互联系。",
             "content": "",
             "summary": "",
             "sections": {
@@ -570,7 +570,7 @@
         },
         "xxii": {
             "title": "Chapter XXII",
-            "description": "",
+            "description": "真诚的结果；以及真诚的拥有者如何与天地形成三元组。",
             "content": "",
             "summary": "",
             "sections": {
@@ -583,7 +583,7 @@
         },
         "xxiii": {
             "title": "Chapter XXIII",
-            "description": "",
+            "description": "人之道；在那些天生不具备真诚的人身上发展出完美的真诚。",
             "content": "",
             "summary": "",
             "sections": {
@@ -596,7 +596,7 @@
         },
         "xxiv": {
             "title": "Chapter XXIV",
-            "description": "",
+            "description": "全部的真诚都可以预知。",
             "content": "",
             "summary": "",
             "sections": {
@@ -609,7 +609,7 @@
         },
         "xxv": {
             "title": "Chapter XXV",
-            "description": "",
+            "description": "真诚如何使自我圆满、他人圆满、事物圆满。",
             "content": "",
             "summary": "",
             "sections": {
@@ -632,7 +632,7 @@
         },
         "xxvi": {
             "title": "Chapter XXVI",
-            "description": "",
+            "description": "圣人至诚之心，与天地相对，表示天地具有同样的品质。",
             "content": "",
             "summary": "",
             "sections": {
@@ -690,7 +690,7 @@
         },
         "xxvii": {
             "title": "Chapter XXVII",
-            "description": "",
+            "description": "圣人的光荣之路；以及君子如何努力实现这一目标。",
             "content": "",
             "summary": "",
             "sections": {
@@ -733,7 +733,7 @@
         },
         "xxviii": {
             "title": "Chapter XXVIII",
-            "description": "",
+            "description": "举例来说，上一章的一句话——“在低位时，他不会不服从。”",
             "content": "",
             "summary": "",
             "sections": {
@@ -766,7 +766,7 @@
         },
         "xxix": {
             "title": "Chapter XXIX",
-            "description": "",
+            "description": "第二十七章中的一句话的例证——“当他身居高位时，他并不骄傲”；或者更确切地说，圣人及其制度的效果和结果。",
             "content": "",
             "summary": "",
             "sections": {
@@ -804,7 +804,7 @@
         },
         "xxx": {
             "title": "Chapter XXX",
-            "description": "",
+            "description": "颂扬孔子为至诚之人、圣人之理想，与天地合一。",
             "content": "",
             "summary": "",
             "sections": {
@@ -827,7 +827,7 @@
         },
         "xxxi": {
             "title": "Chapter XXXI",
-            "description": "",
+            "description": "对孔子的颂扬还在继续。",
             "content": "",
             "summary": "",
             "sections": {
@@ -855,7 +855,7 @@
         },
         "xxxii": {
             "title": "Chapter XXXII",
-            "description": "",
+            "description": "孔子的颂词结束了。",
             "content": "",
             "summary": "",
             "sections": {
@@ -878,7 +878,7 @@
         },
         "xxxiii": {
             "title": "Chapter XXXIII",
-            "description": "",
+            "description": "美德历程的开始和完成。",
             "content": "",
             "summary": "",
             "sections": {
