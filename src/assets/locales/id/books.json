@@ -6,5 +6,9 @@
     "daxue": {
         "name": "Da Xue",
         "description": "Kitab Ajaran Besar"
+    },
+    "zhongyong": {
+        "name": "Zhong Yong",
+        "description": "Kitab Tengah Sempurna"
     }
 }

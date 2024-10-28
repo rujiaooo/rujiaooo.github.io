@@ -1,8 +1,8 @@
 {
     "chapters": {
         "i": {
-            "title": "Chapter 1",
-            "description": "大 學 經",
+            "title": "Chapter I",
+            "description": "孔子文本",
             "content": "",
             "summary": "",
             "sections": {
@@ -50,8 +50,8 @@
             }
         },
         "ii": {
-            "title": "Chapter 2",
-            "description": "大 學 傳 一",
+            "title": "Chapter II",
+            "description": "彰显德行的例证。",
             "content": "",
             "summary": "",
             "sections": {
@@ -78,8 +78,8 @@
             }
         },
         "iii": {
-            "title": "Chapter 3",
-            "description": "大 學 傳 二",
+            "title": "Chapter III",
+            "description": "人民的革新。",
             "content": "",
             "summary": "",
             "sections": {
@@ -106,8 +106,8 @@
             }
         },
         "iv": {
-            "title": "Chapter 4",
-            "description": "大 學 傳 三",
+            "title": "Chapter IV",
+            "description": "安住于最高的卓越境界中。",
             "content": "",
             "summary": "",
             "sections": {
@@ -145,8 +145,8 @@
             }
         },
         "v": {
-            "title": "Chapter 5",
-            "description": "大 學 傳 四",
+            "title": "Chapter V",
+            "description": "根与枝的解释。",
             "content": "",
             "summary": "",
             "sections": {
@@ -158,8 +158,8 @@
             }
         },
         "vi": {
-            "title": "Chapter 6",
-            "description": "大 學 傳 五",
+            "title": "Chapter VI",
+            "description": "探究事物，最大限度地发挥知识",
             "content": "",
             "summary": "",
             "sections": {
@@ -181,8 +181,8 @@
             }
         },
         "vii": {
-            "title": "Chapter 7",
-            "description": "大 學 傳 六",
+            "title": "Chapter VII",
+            "description": "关于真诚的想法",
             "content": "",
             "summary": "",
             "sections": {
@@ -209,8 +209,8 @@
             }
         },
         "viii": {
-            "title": "Chapter 8",
-            "description": "大 學 傳 七",
+            "title": "Chapter VIII",
+            "description": "论个人修养取决于端正心态",
             "content": "",
             "summary": "",
             "sections": {
@@ -232,8 +232,8 @@
             }
         },
         "ix": {
-            "title": "Chapter 9",
-            "description": "大 學 傳 八",
+            "title": "Chapter IX",
+            "description": "修身养性，以齐家",
             "content": "",
             "summary": "",
             "sections": {
@@ -255,8 +255,8 @@
             }
         },
         "x": {
-            "title": "Chapter 10",
-            "description": "大 學 傳 九",
+            "title": "Chapter X",
+            "description": "论规范家庭作为国家秩序的手段",
             "content": "",
             "summary": "",
             "sections": {
@@ -308,8 +308,8 @@
             }
         },
         "xi": {
-            "title": "Chapter 11",
-            "description": "大 學 傳 十",
+            "title": "Chapter XI",
+            "description": "论国家秩序井然，天下太平",
             "content": "",
             "summary": "",
             "sections": {

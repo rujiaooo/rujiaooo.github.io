@@ -38,6 +38,9 @@
 ## Todos
 1. Add navigation
 2. Multilingual page detail view
+3. Highlight view
+- hash highlight
+- click highlight
 
 ## Nice to Have
 Nothing to have right now

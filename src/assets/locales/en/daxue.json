@@ -1,7 +1,7 @@
 {
     "chapters": {
         "i": {
-            "title": "Chapter 1",
+            "title": "Chapter I",
             "description": "Confucius Text",
             "content": "",
             "summary": "",
@@ -50,7 +50,7 @@
             }
         },
         "ii": {
-            "title": "Chapter 2",
+            "title": "Chapter II",
             "description": "The illustration of illustrious virtue",
             "content": "",
             "summary": "",
@@ -78,7 +78,7 @@
             }
         },
         "iii": {
-            "title": "Chapter 3",
+            "title": "Chapter III",
             "description": "The renovation of the people",
             "content": "",
             "summary": "",
@@ -106,7 +106,7 @@
             }
         },
         "iv": {
-            "title": "Chapter 4",
+            "title": "Chapter IV",
             "description": "On resting in the highest excellence",
             "content": "",
             "summary": "",
@@ -145,7 +145,7 @@
             }
         },
         "v": {
-            "title": "Chapter 5",
+            "title": "Chapter V",
             "description": "Explanation of the root and the branches",
             "content": "",
             "summary": "",
@@ -158,7 +158,7 @@
             }
         },
         "vi": {
-            "title": "Chapter 6",
+            "title": "Chapter VI",
             "description": "On the investigation of things, and carrying knowledge to the utmost extent",
             "content": "",
             "summary": "",
@@ -181,7 +181,7 @@
             }
         },
         "vii": {
-            "title": "Chapter 7",
+            "title": "Chapter VII",
             "description": "On having the thoughts sincere",
             "content": "",
             "summary": "",
@@ -209,7 +209,7 @@
             }
         },
         "viii": {
-            "title": "Chapter 8",
+            "title": "Chapter VIII",
             "description": "On personal cultivation as dependent on the rectification of the mind",
             "content": "",
             "summary": "",
@@ -232,7 +232,7 @@
             }
         },
         "ix": {
-            "title": "Chapter 9",
+            "title": "Chapter IX",
             "description": "The necessity of cultivating the person, in order to the regulation of the family",
             "content": "",
             "summary": "",
@@ -255,7 +255,7 @@
             }
         },
         "x": {
-            "title": "Chapter 10",
+            "title": "Chapter X",
             "description": "On regulating the family as the means to the well-ordering of the State",
             "content": "",
             "summary": "",
@@ -308,7 +308,7 @@
             }
         },
         "xi": {
-            "title": "Chapter 11",
+            "title": "Chapter XI",
             "description": "On the well-ordering of the State, and making the whole kingdom peaceful and happy",
             "content": "",
             "summary": "",

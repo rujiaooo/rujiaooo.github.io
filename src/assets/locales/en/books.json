@@ -6,5 +6,9 @@
     "daxue": {
         "name": "Da Xue",
         "description": "The Great Learning of Confucius"
+    },
+    "zhongyong": {
+        "name": "Zhong Yong",
+        "description": "The Doctrine of The Mean"
     }
 }

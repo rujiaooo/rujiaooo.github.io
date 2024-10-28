@@ -182,7 +182,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                 {
                   chapter.detail?.sections && chapter.detail?.sections.length > 0 &&
                   <div className="border rounded-md shadow p-4">
-                    <ol className="flex flex-col gap-2 list-[upper-roman] list-outside pl-10">
+                    <ol className="flex flex-col gap-2 list-decimal list-outside pl-10">
                       {
                         chapter.detail.sections.map((section, i: number) => {
                           return (
