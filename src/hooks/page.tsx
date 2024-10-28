@@ -35,12 +35,21 @@ export function usePage(props?: PageProps) {
   function getLng(lngs: string[]): string | undefined {
     let res = undefined
     for (const lng of lngs) {
-      if (pathname.startsWith(`/${lng}/`)) {
+      if (pathMatch(lng)) {
         res = lng
         break
       }
     }
     return res
+  }
+
+  function pathMatch(lng: string): boolean {
+    const text = pathname.split("/")
+    if (text.length < 2) {
+      return false
+    }
+
+    return text[1] === lng
   }
 
   return {
