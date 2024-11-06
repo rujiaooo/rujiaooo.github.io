@@ -11,6 +11,7 @@ import idBookChapterDetail from "./id/book-chapter-detail.json"
 import idXiaojing from "./id/xiaojing.json"
 import idDaxue from "./id/daxue.json"
 import idZhongyong from "./id/zhongyong.json"
+import idLunyu from "./id/lunyu.json"
 import idNotFound from "./id/not-found.json"
 import idComingSoon from "./id/coming-soon.json"
 import idTranslation from "./id/translation.json"
@@ -28,6 +29,7 @@ import enBookChapterDetail from "./en/book-chapter-detail.json"
 import enXiaojing from "./en/xiaojing.json"
 import enDaxue from "./en/daxue.json"
 import enZhongyong from "./en/zhongyong.json"
+import enLunyu from "./en/lunyu.json"
 import enNotFound from "./en/not-found.json"
 import enComingSoon from "./en/coming-soon.json"
 import enTranslation from "./en/translation.json"
@@ -45,6 +47,7 @@ import zhBookChapterDetail from "./zh/book-chapter-detail.json"
 import zhXiaojing from "./zh/xiaojing.json"
 import zhDaxue from "./zh/daxue.json"
 import zhZhongyong from "./zh/zhongyong.json"
+import zhLunyu from "./zh/lunyu.json"
 import zhNotFound from "./zh/not-found.json"
 import zhComingSoon from "./zh/coming-soon.json"
 import zhTranslation from "./zh/translation.json"
@@ -66,6 +69,7 @@ export const resources = {
     "xiaojing": idXiaojing,
     "daxue": idDaxue,
     "zhongyong": idZhongyong,
+    "lunyu": idLunyu,
     "not-found": idNotFound,
     "coming-soon": idComingSoon,
     "translation": idTranslation,
@@ -84,6 +88,7 @@ export const resources = {
     "xiaojing": enXiaojing,
     "daxue": enDaxue,
     "zhongyong": enZhongyong,
+    "lunyu": enLunyu,
     "not-found": enNotFound,
     "coming-soon": enComingSoon,
     "translation": enTranslation,
@@ -102,6 +107,7 @@ export const resources = {
     "xiaojing": zhXiaojing,
     "daxue": zhDaxue,
     "zhongyong": zhZhongyong,
+    "lunyu": zhLunyu,
     "not-found": zhNotFound,
     "coming-soon": zhComingSoon,
     "translation": zhTranslation,

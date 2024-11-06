@@ -10,5 +10,9 @@
     "zhongyong": {
         "name": "Zhong Yong",
         "description": "中庸"
+    },
+    "lunyu": {
+        "name": "Lun Yu",
+        "description": "論語"
     }
 }

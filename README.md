@@ -37,10 +37,13 @@
 
 ## Todos
 1. Add navigation
-2. Multilingual page detail view
-3. Highlight view
-- hash highlight
+2. Search content
+3. Multilingual page detail view
+4. Highlight view
 - click highlight
+- single hash highlight
+5. Preview page (book, music, etc)
+6. Chat tawk.to
 
 ## Nice to Have
 Nothing to have right now

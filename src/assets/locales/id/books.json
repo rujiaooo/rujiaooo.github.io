@@ -10,5 +10,9 @@
     "zhongyong": {
         "name": "Zhong Yong",
         "description": "Kitab Tengah Sempurna"
+    },
+    "lunyu": {
+        "name": "Lun Yu",
+        "description": "Kitab Sabda Suci"
     }
 }
