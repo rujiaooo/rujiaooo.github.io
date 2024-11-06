@@ -10,5 +10,9 @@
     "zhongyong": {
         "name": "Zhong Yong",
         "description": "The Doctrine of The Mean"
+    },
+    "lunyu": {
+        "name": "Lun Yu",
+        "description": "The Analects of Confucius"
     }
 }

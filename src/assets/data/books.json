@@ -16,5 +16,11 @@
         "name": "Zhong Yong",
         "description": "Kitab Tengah Sempurna",
         "icon": "/image/zhongyong-icon.svg"
+    },
+    {
+        "slug": "lunyu",
+        "name": "Lun Yu",
+        "description": "Kitab Sabda Suci",
+        "icon": "/image/lunyu-icon.svg"
     }
 ]
