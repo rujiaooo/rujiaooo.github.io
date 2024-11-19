@@ -14,5 +14,9 @@
     "lunyu": {
         "name": "Lun Yu",
         "description": "論語"
+    },
+    "mengzi": {
+        "name": "Meng Zi",
+        "description": "孟子"
     }
 }

@@ -9,10 +9,14 @@
     },
     "zhongyong": {
         "name": "Zhong Yong",
-        "description": "The Doctrine of The Mean"
+        "description": "The Doctrine of The Mean of Tsze-sze"
     },
     "lunyu": {
         "name": "Lun Yu",
         "description": "The Analects of Confucius"
+    },
+    "mengzi": {
+        "name": "Meng Zi",
+        "description": "The Works of Mencius"
     }
 }
