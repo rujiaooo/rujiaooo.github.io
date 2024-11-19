@@ -52,7 +52,6 @@ Nothing to have right now
 No issues right now
 
 ## References:
-1. MATAKIN
-2. https://ctext.org/
-3. http://wengu.tartarie.com/wg/wengu.php
-4. http://nothingistic.org/library/confucius/
+1. [MATAKIN](https://matakin.or.id/)
+2. [Chinese Text](https://ctext.org/)
+3. [Wengu zhixin](http://wengu.tartarie.com/wg/wengu.php)
