@@ -22,5 +22,11 @@
         "name": "Lun Yu",
         "description": "Kitab Sabda Suci",
         "icon": "/image/lunyu-icon.svg"
+    },
+    {
+        "slug": "mengzi",
+        "name": "Meng Zi",
+        "description": "Kitab Bing Cu",
+        "icon": "/image/mengzi-icon.svg"
     }
 ]

@@ -14,5 +14,9 @@
     "lunyu": {
         "name": "Lun Yu",
         "description": "Kitab Sabda Suci"
+    },
+    "mengzi": {
+        "name": "Meng Zi",
+        "description": "Kitab Bing Cu"
     }
 }
