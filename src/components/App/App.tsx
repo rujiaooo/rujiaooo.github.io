@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Suspense } from "react"
 import { RouterProvider } from "react-router-dom"
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
 import { ThemeProvider } from "../Theme"
 import { MetaProvider } from "../Meta"
 import { Spinner } from "../Spinner"
@@ -48,6 +49,9 @@ export default function WrappedApp(): React.JSX.Element {
       </div>
     }>
       <App />
+      <TawkMessengerReact
+        propertyId={`${import.meta.env.VITE_TAWK_PROPERTY_ID}`}
+        widgetId={`${import.meta.env.VITE_TAWK_WIDGET_ID}`} />
     </Suspense>
   )
 }
