@@ -21,6 +21,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.26.6",
     "@headlessui/react": "^1.7.19",
+    "@tawk.to/tawk-messenger-react": "^2.0.2",
     "he": "^1.2.0",
     "i18next": "^23.12.2",
     "i18next-http-backend": "^2.5.2",

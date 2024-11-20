@@ -42,8 +42,7 @@
 - click highlight
 - single hash highlight
 4. Preview page (book, music, etc)
-5. Chat tawk.to
-6. Enhance music filter (multiple firstChar, removeable firstChar)
+5. Enhance music filter (multiple firstChar, removeable firstChar)
 
 ## Nice to Have
 Nothing to have right now
