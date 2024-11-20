@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useParams, useNavigate } from "react-router-dom"
+import { ButtonLink } from "../components/Button"
 import { Container } from "../components/Container"
 import { Meta } from "../components/Meta"
 import { Link } from "../components/Router"
@@ -8,6 +9,7 @@ import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
 import { BookService } from "../services/static/Book"
 import { Status, StatusCode } from "../services/Status"
+import { PrevNext } from "../features/Navigation"
 
 type BookDetailProps = {
   lng?: string
@@ -18,6 +20,8 @@ type Book = {
   name: string
   description?: string
   chapters: Chapter[]
+  prev?: Book
+  next?: Book
 }
 
 type Chapter = {
@@ -143,6 +147,12 @@ export default function BookDetail(props: BookDetailProps): React.JSX.Element {
           <div className="py-5 md:py-10">
             <Container size="2xl">
               <div className="flex flex-col gap-4">
+                <div className="flex">
+                  <ButtonLink to={`${lngTo}/book`} variant="secondary" appendClassNames="flex flex-row justify-center items-center gap-2">
+                    Back
+                  </ButtonLink>
+                </div>
+
                 <div className="border rounded-md shadow p-4">
                   <div className="flex flex-col gap-2">
                     <p className="font-semibold text-3xl text-confucius-black">
@@ -190,6 +200,18 @@ export default function BookDetail(props: BookDetailProps): React.JSX.Element {
                   </div>
                 }
 
+                <PrevNext
+                  prev={{
+                    to: `/book/${book.detail?.prev?.slug}`,
+                    label: `${book.detail?.prev?.name}`,
+                    disabled: !book.detail?.prev,
+                  }}
+                  next={{
+                    to: `/book/${book.detail?.next?.slug}`,
+                    label: `${book.detail?.next?.name}`,
+                    disabled: !book.detail?.next,
+                  }}
+                />
               </div>
             </Container>
           </div>

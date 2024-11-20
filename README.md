@@ -36,14 +36,14 @@
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Add navigation
-2. Search content
-3. Multilingual page detail view
-4. Highlight view
+1. Search content
+2. Multilingual page detail view
+3. Highlight view
 - click highlight
 - single hash highlight
-5. Preview page (book, music, etc)
-6. Chat tawk.to
+4. Preview page (book, music, etc)
+5. Chat tawk.to
+6. Enhance music filter (multiple firstChar, removeable firstChar)
 
 ## Nice to Have
 Nothing to have right now

@@ -50,6 +50,8 @@ type GetBookData = {
   name: string
   description?: string
   chapters: Chapter[]
+  prev?: GetBookData
+  next?: GetBookData
 }
 
 export type GetBookChapterParam = {
@@ -65,13 +67,15 @@ export type GetBookChapterResult = {
 }
 
 type GetBookChapterData = {
-  book: Book
+  book?: Book
   slug: string
   title: string
   description?: string
   content?: string
   summary?: string
   sections: Section[]
+  prev?: GetBookChapterData
+  next?: GetBookChapterData
 }
 
 type Book = {

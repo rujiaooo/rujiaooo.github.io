@@ -155,18 +155,33 @@ export class MusicService {
 
   public async GetMusic(p: GetMusicParam): Promise<GetMusicResult> {
     try {
-      const music = this.musics.find((music) => {
+      const musicIdx = this.musics.findIndex((music) => {
         return music.slug === p.slug
       })
-      if (!music) {
+      if (musicIdx === -1) {
         return {
           error: new Status("music not available", RESOURCE_NOTFOUND),
         }
       }
 
+      const music = this.musics[musicIdx]
+      let prev: Music | undefined = undefined
+      let next: Music | undefined = undefined
+      if (musicIdx > 0) {
+        prev = this.musics[musicIdx - 1]
+      }
+
+      if (musicIdx + 1 < this.musics.length) {
+        next = this.musics[musicIdx + 1]
+      }
+
       return {
         success: new Status("success get music", ACTION_SUCCESS),
-        data: music
+        data: {
+          ...music,
+          prev,
+          next,
+        }
       }
     } catch (err: unknown) {
       const e = err as Error
