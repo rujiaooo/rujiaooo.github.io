@@ -7,25 +7,26 @@ import { useTranslator } from "../features/Translation"
 
 export default function Guest(): React.JSX.Element {
   const { lng } = usePage()
+  const lngTo = lng === undefined ? "" : `/${lng}`
   const { translate } = useTranslator()
 
   return (
     <div className="font-roboto">
       <Header
-        logoUrl={`/${lng}`}
+        logoUrl={`${lngTo}`}
         logoImage={`/image/confucius-logo.png`}
         menuItems={[
           {
             content: translate("menuItem.music", { lng }),
-            to: `/${lng}/music`
+            to: `${lngTo}/music`
           },
           {
             content: translate("menuItem.book", { lng }),
-            to: `/${lng}/book`
+            to: `${lngTo}/book`
           },
           {
             content: translate("menuItem.contact", { lng }),
-            to: `/${lng}/contact`
+            to: `${lngTo}/contact`
           }
         ]}
         linkItems={[

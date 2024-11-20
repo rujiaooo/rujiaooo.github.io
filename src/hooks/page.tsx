@@ -7,7 +7,6 @@ type PageProps = {
 
 export function usePage(props?: PageProps) {
   const {
-    defaultLng = "id",
     lngs = ["id", "en", "zh"]
   } = props || {}
 
@@ -19,7 +18,7 @@ export function usePage(props?: PageProps) {
     return homePaths.has(pathname === "/" ? pathname : pathname.replace(/\/$/, ""))
   }
 
-  function parseLng(): string {
+  function parseLng(): string | undefined {
     if (paramLng) {
       return paramLng
     }
@@ -29,7 +28,7 @@ export function usePage(props?: PageProps) {
       return pathLng
     }
 
-    return defaultLng
+    return undefined
   }
 
   function getLng(lngs: string[]): string | undefined {

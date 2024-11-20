@@ -51,6 +51,8 @@ type GetMusicData = {
   content?: string
   videos: string[]
   contributions: Contribution[]
+  prev?: GetMusicData
+  next?: GetMusicData
 }
 
 type Contribution = {

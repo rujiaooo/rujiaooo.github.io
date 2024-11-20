@@ -45,6 +45,7 @@ export default function Music(props: MusicProps): React.JSX.Element {
     lng
   } = props
   const lngTo = lng === undefined ? "" : `/${lng}`
+
   const { translate } = useTranslator({
     lng,
     ns: ["music", "musics"]

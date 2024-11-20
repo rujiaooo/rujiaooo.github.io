@@ -197,13 +197,24 @@ export class BookService {
         slug
       } = p
 
-      const book = this.books.find((book) => {
+      const bookIdx = this.books.findIndex((book) => {
         return book.slug === slug
       })
-      if (!book) {
+      if (bookIdx === -1) {
         return {
           error: new Status("book not available", RESOURCE_NOTFOUND),
         }
+      }
+
+      const book = this.books[bookIdx]
+      let prev: Book | undefined = undefined
+      let next: Book | undefined = undefined
+      if (bookIdx > 0) {
+        prev = this.books[bookIdx - 1]
+      }
+
+      if (bookIdx + 1 < this.books.length) {
+        next = this.books[bookIdx + 1]
       }
 
       return {
@@ -237,7 +248,9 @@ export class BookService {
                 }
               })
             }
-          })
+          }),
+          prev,
+          next
         }
       }
     } catch (err: unknown) {
@@ -265,13 +278,24 @@ export class BookService {
         }
       }
 
-      const chapter = book.chapters.find((chapter) => {
+      const chapterIdx = book.chapters.findIndex((chapter) => {
         return chapter.slug === slug
       })
-      if (!chapter) {
+      if (chapterIdx === -1) {
         return {
           error: new Status("chapter not available", RESOURCE_NOTFOUND),
         }
+      }
+
+      const chapter = book.chapters[chapterIdx]
+      let prev: Chapter | undefined = undefined
+      let next: Chapter | undefined = undefined
+      if (chapterIdx > 0) {
+        prev = book.chapters[chapterIdx - 1]
+      }
+
+      if (chapterIdx + 1 < book.chapters.length) {
+        next = book.chapters[chapterIdx + 1]
       }
 
       return {
@@ -303,7 +327,9 @@ export class BookService {
                 he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.content`, { lng, ns: [book.slug] })) :
                 undefined,
             }
-          })
+          }),
+          prev,
+          next
         }
       }
     } catch (err: unknown) {

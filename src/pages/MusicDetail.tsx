@@ -1,6 +1,7 @@
 import * as React from "react"
 import { FaMusic, FaRegStickyNote } from "react-icons/fa"
 import { useParams } from "react-router-dom"
+import { ButtonLink } from "../components/Button"
 import { Container } from "../components/Container"
 import { Meta } from "../components/Meta"
 import { useAutoPosition, useHashFragment } from "../hooks"
@@ -8,6 +9,7 @@ import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
 import { MusicService } from "../services/static/Music"
 import { Status, StatusCode } from "../services/Status"
+import { PrevNext } from "../features/Navigation"
 
 type MusicDetailProps = {
   lng?: string
@@ -19,6 +21,8 @@ type Music = {
   content?: string
   videos: string[]
   contributions: Contribution[]
+  prev?: Music
+  next?: Music
 }
 
 type Contribution = {
@@ -44,6 +48,8 @@ export default function MusicDetail(props: MusicDetailProps): React.JSX.Element 
   const {
     lng
   } = props
+  const lngTo = lng === undefined ? "" : `/${lng}`
+
   const { slug } = useParams()
   const { translate } = useTranslator({
     lng,
@@ -149,72 +155,106 @@ export default function MusicDetail(props: MusicDetailProps): React.JSX.Element 
 
           <div className="py-5 md:py-10">
             <Container size="2xl">
-              <div className="border rounded-md shadow p-4">
-                <div className="flex flex-col gap-4">
-                  <p className="font-semibold text-3xl text-confucius-black">
-                    {music.detail?.title}
-                  </p>
+              <div className="flex flex-col gap-4">
+                <div className="flex">
+                  <ButtonLink to={`${lngTo}/music`} variant="secondary" appendClassNames="flex flex-row justify-center items-center gap-2">
+                    Back
+                  </ButtonLink>
+                </div>
 
-                  {
-                    music.detail?.contributions && music.detail?.contributions.length > 0 &&
-                    <ul className="flex flex-col gap-1">
-                      {
-                        music.detail.contributions.map((contribution, i: number) => {
-                          return (
-                            <React.Fragment key={`contribution-item-${i}`}>
-                              <li className="flex flex-row gap-2 justify-start items-center">
-                                {
-                                  contribution.role === "lyric" ?
-                                    <FaMusic className="w-5 h-5" aria-hidden="true" />
-                                    :
-                                    <FaRegStickyNote className="w-5 h-5" aria-hidden="true" />
-                                }
+                <PrevNext
+                  prev={{
+                    to: `/music/${music.detail?.prev?.slug}`,
+                    label: `${music.detail?.prev?.title}`,
+                    disabled: !music.detail?.prev,
+                  }}
+                  next={{
+                    to: `/music/${music.detail?.next?.slug}`,
+                    label: `${music.detail?.next?.title}`,
+                    disabled: !music.detail?.next,
+                  }}
+                />
 
-                                <p className="text-base">
-                                  {contribution.people.name}
-                                </p>
-                              </li>
-                            </React.Fragment>
-                          )
-                        })
-                      }
-                    </ul>
-                  }
+                <div className="border rounded-md shadow p-4">
+                  <div className="flex flex-col gap-4">
+                    <p className="font-semibold text-3xl text-confucius-black">
+                      {music.detail?.title}
+                    </p>
 
-                  <hr className="my-1 border-[rgba(34,36,38,.15)]" />
-
-                  <p className="font-semibold text-xl text-confucius-black">
-                    {translate(`music-detail:musicLyricTitle`, { ns: ["music-detail"] })}
-                  </p>
-                  <div className="text-lg"
-                    dangerouslySetInnerHTML={{
-                      __html: music.detail?.content || ""
-                    }}>
-
-                  </div>
-
-                  {
-                    music.detail?.videos && music.detail?.videos.length > 0 &&
-                    <>
-                      <hr className="my-1 border-[rgba(34,36,38,.15)]" />
-                      <p className="font-semibold text-xl text-confucius-black">
-                        {translate(`music-detail:musicVideoTitle`, { ns: ["music-detail"] })}
-                      </p>
-                      <div className="flex flex-col gap-2">
+                    {
+                      music.detail?.contributions && music.detail?.contributions.length > 0 &&
+                      <ul className="flex flex-col gap-1">
                         {
-                          music.detail?.videos.map((video, i: number) => {
+                          music.detail.contributions.map((contribution, i: number) => {
                             return (
-                              <React.Fragment key={`video-item-${i}`}>
-                                <iframe src={video} width="100%" height="500px" allowFullScreen>
-                                </iframe>
+                              <React.Fragment key={`contribution-item-${i}`}>
+                                <li className="flex flex-row gap-2 justify-start items-center">
+                                  {
+                                    contribution.role === "lyric" ?
+                                      <FaMusic className="w-5 h-5" aria-hidden="true" />
+                                      :
+                                      <FaRegStickyNote className="w-5 h-5" aria-hidden="true" />
+                                  }
+
+                                  <p className="text-base">
+                                    {contribution.people.name}
+                                  </p>
+                                </li>
                               </React.Fragment>
                             )
                           })
                         }
-                      </div>
-                    </>
-                  }
+                      </ul>
+                    }
+
+                    <hr className="my-1 border-[rgba(34,36,38,.15)]" />
+
+                    <p className="font-semibold text-xl text-confucius-black">
+                      {translate(`music-detail:musicLyricTitle`, { ns: ["music-detail"] })}
+                    </p>
+                    <div className="text-lg"
+                      dangerouslySetInnerHTML={{
+                        __html: music.detail?.content || ""
+                      }}>
+
+                    </div>
+
+                    {
+                      music.detail?.videos && music.detail?.videos.length > 0 &&
+                      <>
+                        <hr className="my-1 border-[rgba(34,36,38,.15)]" />
+                        <p className="font-semibold text-xl text-confucius-black">
+                          {translate(`music-detail:musicVideoTitle`, { ns: ["music-detail"] })}
+                        </p>
+                        <div className="flex flex-col gap-2">
+                          {
+                            music.detail?.videos.map((video, i: number) => {
+                              return (
+                                <React.Fragment key={`video-item-${i}`}>
+                                  <iframe src={video} width="100%" height="500px" allowFullScreen>
+                                  </iframe>
+                                </React.Fragment>
+                              )
+                            })
+                          }
+                        </div>
+                      </>
+                    }
+                  </div>
                 </div>
+
+                <PrevNext
+                  prev={{
+                    to: `/music/${music.detail?.prev?.slug}`,
+                    label: `${music.detail?.prev?.title}`,
+                    disabled: !music.detail?.prev,
+                  }}
+                  next={{
+                    to: `/music/${music.detail?.next?.slug}`,
+                    label: `${music.detail?.next?.title}`,
+                    disabled: !music.detail?.next,
+                  }}
+                />
               </div>
             </Container>
           </div>

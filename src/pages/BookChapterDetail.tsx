@@ -7,6 +7,8 @@ import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
 import { BookService } from "../services/static/Book"
 import { Status, StatusCode } from "../services/Status"
+import { PrevNext } from "../features/Navigation"
+import { ButtonLink } from "../components/Button"
 
 type BookChapterDetailProps = {
   lng?: string
@@ -24,8 +26,10 @@ type Chapter = {
   description?: string
   content?: string
   summary?: string
-  book: Book
   sections: Section[]
+  book?: Book
+  prev?: Chapter
+  next?: Chapter
 }
 
 type Section = {
@@ -42,6 +46,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
   const {
     lng
   } = props
+  const lngTo = lng === undefined ? "" : `/${lng}`
 
   const { book, slug } = useParams()
   const { translate } = useTranslator({
@@ -146,7 +151,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
         <>
           <Meta>
             {{
-              title: `${chapter.detail?.book.name} ${chapter.detail?.title}` || "",
+              title: `${chapter.detail?.book?.name} ${chapter.detail?.title}` || "",
               description: chapter.detail?.description || "",
             }}
           </Meta>
@@ -154,10 +159,29 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
           <div className="py-5 md:py-10">
             <Container size="2xl">
               <div className="flex flex-col gap-4">
+                <div className="flex">
+                  <ButtonLink to={`${lngTo}/book/${chapter.detail?.book?.slug}`} variant="secondary" appendClassNames="flex flex-row justify-center items-center gap-2">
+                    Back
+                  </ButtonLink>
+                </div>
+
+                <PrevNext
+                  prev={{
+                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
+                    label: `${chapter.detail?.prev?.title}`,
+                    disabled: !chapter.detail?.prev,
+                  }}
+                  next={{
+                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
+                    label: `${chapter.detail?.next?.title}`,
+                    disabled: !chapter.detail?.next,
+                  }}
+                />
+
                 <div className="border rounded-md shadow p-4">
                   <div className="flex flex-col gap-2">
                     <p className="font-semibold text-3xl text-confucius-black">
-                      {chapter.detail?.book.name}: {chapter.detail?.title}
+                      {chapter.detail?.book?.name}: {chapter.detail?.title}
                     </p>
 
                     {
@@ -202,6 +226,18 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                   </div>
                 }
 
+                <PrevNext
+                  prev={{
+                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
+                    label: `${chapter.detail?.prev?.title}`,
+                    disabled: !chapter.detail?.prev,
+                  }}
+                  next={{
+                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
+                    label: `${chapter.detail?.next?.title}`,
+                    disabled: !chapter.detail?.next,
+                  }}
+                />
               </div>
             </Container>
           </div>
