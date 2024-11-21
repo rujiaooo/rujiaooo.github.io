@@ -21,14 +21,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+    - name: Prepare site environment
+      run:
+        echo "VITE_PUBLIC_URL=${{ vars.VITE_PUBLIC_URL }}" >> .env &&
+        echo "VITE_API_HOST=${{ vars.VITE_API_HOST }}" >> .env &&
+        echo "VITE_GOOGLE_ANALYTICS_ID=${{ vars.VITE_GOOGLE_ANALYTICS_ID }}" >> .env &&
+        echo "VITE_TAWK_PROPERTY_ID=${{ vars.VITE_TAWK_PROPERTY_ID }}" >> .env &&
+        echo "VITE_TAWK_WIDGET_ID=${{ vars.VITE_TAWK_WIDGET_ID }}" >> .env
     - name: Build site
       run: npm run deploy:prod
-      env:
-        VITE_PUBLIC_URL: ${{ vars.VITE_PUBLIC_URL }}
-        VITE_API_HOST: ${{ vars.VITE_API_HOST }}
-        VITE_GOOGLE_ANALYTICS_ID: ${{ vars.VITE_GOOGLE_ANALYTICS_ID }}
-        VITE_TAWK_PROPERTY_ID: ${{ vars.VITE_TAWK_PROPERTY_ID }}
-        VITE_TAWK_WIDGET_ID: ${{ vars.VITE_TAWK_WIDGET_ID }}
     - name: Upload site
       uses: actions/upload-pages-artifact@v1
       with:
