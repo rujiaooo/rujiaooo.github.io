@@ -1,32 +1,44 @@
 import * as React from "react"
 import { useLocation } from "react-router-dom"
 
-export function useHashFragment() {
+type HashFragmentProps = {
+  parseCsv?: boolean
+}
+
+export function useHashFragment(props?: HashFragmentProps) {
+  const {
+    parseCsv = false,
+  } = props || {}
+
   const location = useLocation()
   const lastHash = React.useRef("")
 
   // listen to location change using useEffect with location as dependency
   // https://jasonwatmore.com/react-router-v6-listen-to-location-route-change-without-history-listen
   React.useEffect(() => {
-    if (location.hash) {
-      lastHash.current = location.hash.slice(1) // safe hash for further use after navigation
-    }
+    setTimeout(() => {
+      if (!location.hash) {
+        return
+      }
 
-    if (lastHash.current && document.getElementById(lastHash.current)) {
-      setTimeout(() => {
-        const element = document.getElementById(lastHash.current)
-        if (!element) {
-          return
-        }
+      let hash = location.hash.slice(1) // safe hash for further use after navigation
+      if (parseCsv) {
+        hash = hash.split(",")[0]
+      }
 
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        })
-        lastHash.current = ""
-      }, 100)
-    }
-  }, [location])
+      lastHash.current = hash
+      const element = document.getElementById(lastHash.current)
+      if (!element) {
+        return
+      }
+
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      })
+      lastHash.current = ""
+    }, 1000)
+  }, [location, parseCsv])
 }
 
 type AutoPositionProps = {
@@ -57,7 +69,7 @@ export function useAutoPosition(props?: AutoPositionProps) {
       behavior: "smooth"
     })
     return
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies)
 }
 

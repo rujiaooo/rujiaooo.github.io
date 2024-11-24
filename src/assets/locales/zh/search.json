@@ -1,0 +1,13 @@
+{
+    "metaTitle": "搜索",
+    "metaDescription": "搜索结果",
+    "searchKeywordPlaceholder": "请输入关键字...",
+    "searchNotFoundTitle": "哎呀，未找到数据",
+    "searchNotFoundDescription": "请用其他关键字搜索",
+    "searchKeywordEmptyTitle": "哎呀空关键字",
+    "searchKeywordEmptyDescription": "请输入搜索关键字",
+    "searchItemEntity": {
+        "music": "音乐",
+        "book": "书"
+    }
+}

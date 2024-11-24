@@ -1,11 +1,12 @@
 import { Status } from "./Status"
 
-export interface Music {
+export interface MusicService {
   SearchMusic(p: SearchMusicParam): Promise<SearchMusicResult>
   GetMusic(p: GetMusicParam): Promise<GetMusicResult>
 }
 
 export type SearchMusicParam = {
+  lng?: string
   page?: number
   total_items?: number
   first_char?: string

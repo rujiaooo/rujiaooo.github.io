@@ -1,4 +1,6 @@
 {
     "metaTitle": "首页",
-    "metaDescription": "全民教育"
+    "metaDescription": "全民教育",
+    "searchKeywordPlaceholder": "请输入关键字...",
+    "searchKeywordEmptyWarn": "请输入搜索关键字..."
 }

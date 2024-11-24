@@ -1,4 +1,6 @@
 {
     "metaTitle": "Beranda",
-    "metaDescription": "Ada pendidikan tiada perbedaan"
+    "metaDescription": "Ada pendidikan tiada perbedaan",
+    "searchKeywordPlaceholder": "Ketikan kata kunci pencarian...",
+    "searchKeywordEmptyWarn": "Silahkan ketikan kata kunci pencarian..."
 }

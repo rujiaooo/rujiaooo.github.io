@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useLocation } from "react-router-dom"
 import { Container } from "../components/Container"
 import { Meta } from "../components/Meta"
 import { useAutoPosition, useHashFragment } from "../hooks"
@@ -48,12 +48,14 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
   } = props
   const lngTo = lng === undefined ? "" : `/${lng}`
 
+  const { hash } = useLocation()
   const { book, slug } = useParams()
   const { translate } = useTranslator({
     lng,
     ns: ["book-chapter-detail"]
   })
 
+  const [highlight, setHighlight] = React.useState(new Set<string>([]))
   const [chapter, setChapter] = React.useState({
     loading: false,
     detail: undefined as undefined | Chapter,
@@ -84,6 +86,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
       return
     }
 
+    setHighlight(new Set([]))
     setChapter((prevState) => {
       return {
         ...prevState,
@@ -91,6 +94,37 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
       }
     })
   }
+
+  function toggleHighlight(sectionId: string) {
+    setHighlight((prevState) => {
+      const newHighlight = new Set(prevState.values())
+
+      if (newHighlight.has(sectionId)) {
+        newHighlight.delete(sectionId)
+      } else {
+        newHighlight.add(sectionId)
+      }
+      return newHighlight
+    })
+  }
+
+  React.useEffect(() => {
+    const sectionIds = hash.replace("#", "").split(",")
+    if (!Array.isArray(sectionIds) || sectionIds.length === 0) {
+      setHighlight(new Set([]))
+      return
+    }
+
+    setHighlight((prevState) => {
+      const newHighlight = new Set(prevState.values())
+
+      sectionIds.forEach((sectionId) => {
+        newHighlight.add(`book/${chapter.detail?.book?.slug}/${chapter.detail?.slug}/${sectionId}`)
+      })
+
+      return newHighlight
+    })
+  }, [hash, chapter])
 
   React.useEffect(() => {
     if (!book) {
@@ -109,7 +143,9 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
   }, [book, slug, lng])
 
   useAutoPosition()
-  useHashFragment()
+  useHashFragment({
+    parseCsv: true
+  })
 
   return (
     <>
@@ -151,7 +187,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
         <>
           <Meta>
             {{
-              title: `${chapter.detail?.book?.name} ${chapter.detail?.title}` || "",
+              title: `${chapter.detail?.title}` || "",
               description: chapter.detail?.description || "",
             }}
           </Meta>
@@ -181,7 +217,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                 <div className="border rounded-md shadow p-4">
                   <div className="flex flex-col gap-2">
                     <p className="font-semibold text-3xl text-confucius-black">
-                      {chapter.detail?.book?.name}: {chapter.detail?.title}
+                      {chapter.detail?.title}
                     </p>
 
                     {
@@ -211,10 +247,11 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                         chapter.detail.sections.map((section, i: number) => {
                           return (
                             <React.Fragment key={`section-${i}`}>
-                              <li id={section.slug}>
+                              <li id={section.slug} className={`scroll-my-20 cursor-pointer`}
+                                onClick={() => { toggleHighlight(`book/${chapter.detail?.book?.slug}/${chapter.detail?.slug}/${section.slug}`) }}>
                                 <div dangerouslySetInnerHTML={{
                                   __html: section.content || ""
-                                }}>
+                                }} className={(highlight.has(`book/${chapter.detail?.book?.slug}/${chapter.detail?.slug}/${section.slug}`) ? "bg-book-highlight text-white p-2 rounded" : "")}>
 
                                 </div>
                               </li>

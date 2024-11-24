@@ -5,6 +5,7 @@ import {
 import Guest from "../../layout/Guest"
 import Home from "../../pages/Home"
 import Contact from "../../pages/Contact"
+import Search from "../../pages/Search"
 import Music from "../../pages/Music"
 import MusicDetail from "../../pages/MusicDetail"
 import Book from "../../pages/Book"
@@ -17,6 +18,7 @@ import { lngs } from "../../assets/locales"
 const guests: RouteProps[] = [
   { path: "/", element: <Home /> },
   { path: "/contact", element: <Contact /> },
+  { path: "/search", element: <Search /> },
   { path: "/music", element: <Music /> },
   { path: "/music/:slug", element: <MusicDetail /> },
   { path: "/book", element: <Book /> },
@@ -28,6 +30,7 @@ const guests: RouteProps[] = [
 lngs.map((lng) => {
   guests.push({ path: `/${lng}`, element: <Home lng={lng} /> })
   guests.push({ path: `/${lng}/contact`, element: <Contact lng={lng} /> })
+  guests.push({ path: `/${lng}/search`, element: <Search lng={lng} /> })
   guests.push({ path: `/${lng}/music`, element: <Music lng={lng} /> })
   guests.push({ path: `/${lng}/music/:slug`, element: <MusicDetail lng={lng} /> })
   guests.push({ path: `/${lng}/book`, element: <Book lng={lng} /> })
