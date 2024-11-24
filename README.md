@@ -36,13 +36,19 @@
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Search content
 2. Multilingual page detail view
 3. Highlight view
 - click highlight
 - single hash highlight
 4. Preview page (book, music, etc)
 5. Enhance music filter (multiple firstChar, removeable firstChar)
+6. Add book: Shijing
+7. Add book: Shujing
+8. Add book: Yijing
+9. Add book: Lijing
+10. Add book: Chunqiujing
+11. Add prayer letter
+12. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now

@@ -1,4 +1,6 @@
 {
     "metaTitle": "Home",
-    "metaDescription": "Education for all"
+    "metaDescription": "Education for all",
+    "searchKeywordPlaceholder": "Type some keyword...",
+    "searchKeywordEmptyWarn": "Please specify search keyword..."
 }

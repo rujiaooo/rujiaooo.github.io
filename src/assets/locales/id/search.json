@@ -1,0 +1,13 @@
+{
+    "metaTitle": "Pencarian",
+    "metaDescription": "Hasil pencarian",
+    "searchKeywordPlaceholder": "Ketikan kata kunci pencarian...",
+    "searchNotFoundTitle": "Oops data tidak ditemukan",
+    "searchNotFoundDescription": "Silahkan cari dengan kata kunci lainnya",
+    "searchKeywordEmptyTitle": "Oops kata kunci kosong",
+    "searchKeywordEmptyDescription": "Silahkan ketikan kata kunci pencarian",
+    "searchItemEntity": {
+        "music": "Musik",
+        "book": "Buku"
+    }
+}

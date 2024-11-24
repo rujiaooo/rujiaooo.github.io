@@ -3,6 +3,7 @@ import idHome from "./id/home.json"
 import idMusic from "./id/music.json"
 import idBook from "./id/book.json"
 import idContact from "./id/contact.json"
+import idSearch from "./id/search.json"
 import idMusics from "./id/musics.json"
 import idMusicDetail from "./id/music-detail.json"
 import idBooks from "./id/books.json"
@@ -22,6 +23,7 @@ import enHome from "./en/home.json"
 import enMusic from "./en/music.json"
 import enBook from "./en/book.json"
 import enContact from "./en/contact.json"
+import enSearch from "./en/search.json"
 import enMusics from "./en/musics.json"
 import enMusicDetail from "./en/music-detail.json"
 import enBooks from "./en/books.json"
@@ -41,6 +43,7 @@ import zhHome from "./zh/home.json"
 import zhMusic from "./zh/music.json"
 import zhBook from "./zh/book.json"
 import zhContact from "./zh/contact.json"
+import zhSearch from "./zh/search.json"
 import zhMusics from "./zh/musics.json"
 import zhMusicDetail from "./zh/music-detail.json"
 import zhBooks from "./zh/books.json"
@@ -64,6 +67,7 @@ export const resources = {
     "music": idMusic,
     "book": idBook,
     "contact": idContact,
+    "search": idSearch,
     "musics": idMusics,
     "music-detail": idMusicDetail,
     "books": idBooks,
@@ -84,6 +88,7 @@ export const resources = {
     "music": enMusic,
     "book": enBook,
     "contact": enContact,
+    "search": enSearch,
     "musics": enMusics,
     "music-detail": enMusicDetail,
     "books": enBooks,
@@ -104,6 +109,7 @@ export const resources = {
     "music": zhMusic,
     "book": zhBook,
     "contact": zhContact,
+    "search": zhSearch,
     "musics": zhMusics,
     "music-detail": zhMusicDetail,
     "books": zhBooks,

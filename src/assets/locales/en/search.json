@@ -1,0 +1,13 @@
+{
+    "metaTitle": "Search",
+    "metaDescription": "Search result",
+    "searchKeywordPlaceholder": "Type some keyword...",
+    "searchNotFoundTitle": "Oops data not found",
+    "searchNotFoundDescription": "Please search with another keyword",
+    "searchKeywordEmptyTitle": "Oops keyword is not specified",
+    "searchKeywordEmptyDescription": "Please type the keyword first",
+    "searchItemEntity": {
+        "music": "Music",
+        "book": "Book"
+    }
+}
