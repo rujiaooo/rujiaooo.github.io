@@ -39,7 +39,6 @@
 2. Multilingual page detail view
 3. Highlight view
 - click highlight
-- single hash highlight
 4. Preview page (book, music, etc)
 5. Enhance music filter (multiple firstChar, removeable firstChar)
 6. Add book: Shijing
