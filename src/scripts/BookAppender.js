@@ -4,25 +4,23 @@ import fs from "fs"
 
 function main() {
   const result = {
-    chapters: {}
+    chapters: []
   }
+
   for (const chapter of book.chapters) {
-    const sections = {}
+    const sections = []
     for (const section of chapter.sections) {
-      sections[section.slug] = {
-        title: section.title,
-        description: section.description,
-        content: section.content,
-      }
+      sections.push({
+        ...section,
+        title: `Xiao Jing ${chapter.title.replace("Bab ", "")}:${section.slug}`
+      })
     }
 
-    result.chapters[chapter.slug] = {
-      title: chapter.title,
-      description: chapter.description,
-      content: chapter.content,
-      summary: chapter.summary,
+    result.chapters.push({
+      ...chapter,
+      title: `Xiao Jing ${chapter.title.replace("Bab ", "")}`,
       sections
-    }
+    })
   }
 
   const resultText = JSON.stringify(result)
