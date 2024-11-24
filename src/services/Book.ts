@@ -32,6 +32,7 @@ type SearchBookItem = {
   slug: string
   name: string
   description?: string
+  chapters: Chapter[]
 }
 
 export type GetBookParam = {
