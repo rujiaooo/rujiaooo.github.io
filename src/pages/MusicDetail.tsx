@@ -165,12 +165,12 @@ export default function MusicDetail(props: MusicDetailProps): React.JSX.Element 
                 <PrevNext
                   prev={{
                     to: `/music/${music.detail?.prev?.slug}`,
-                    label: `${music.detail?.prev?.title}`,
+                    label: `Previous`,
                     disabled: !music.detail?.prev,
                   }}
                   next={{
                     to: `/music/${music.detail?.next?.slug}`,
-                    label: `${music.detail?.next?.title}`,
+                    label: `Next`,
                     disabled: !music.detail?.next,
                   }}
                 />
@@ -246,12 +246,12 @@ export default function MusicDetail(props: MusicDetailProps): React.JSX.Element 
                 <PrevNext
                   prev={{
                     to: `/music/${music.detail?.prev?.slug}`,
-                    label: `${music.detail?.prev?.title}`,
+                    label: `Previous`,
                     disabled: !music.detail?.prev,
                   }}
                   next={{
                     to: `/music/${music.detail?.next?.slug}`,
-                    label: `${music.detail?.next?.title}`,
+                    label: `Next`,
                     disabled: !music.detail?.next,
                   }}
                 />
