@@ -151,7 +151,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
         <>
           <Meta>
             {{
-              title: `${chapter.detail?.book?.name} ${chapter.detail?.title}` || "",
+              title: `${chapter.detail?.title}` || "",
               description: chapter.detail?.description || "",
             }}
           </Meta>
@@ -181,7 +181,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                 <div className="border rounded-md shadow p-4">
                   <div className="flex flex-col gap-2">
                     <p className="font-semibold text-3xl text-confucius-black">
-                      {chapter.detail?.book?.name}: {chapter.detail?.title}
+                      {chapter.detail?.title}
                     </p>
 
                     {
