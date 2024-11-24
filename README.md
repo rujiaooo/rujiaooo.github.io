@@ -2,9 +2,9 @@
 
 **Education for all**
 
-> _Carilah dan engkau akan mendapatkannya. Sia-siakanlah dan engkau akan kehilangan._
-> _Inilah mencari yang berfaedah untuk didapatkan dan carilah itu di dalam diri._
-> _~Meng Zi VII A:3.1_
+> _If you can one day renovate yourself, do so from day to day._
+> _Yea, let there be daily renovation.._
+> _~Da Xue III:4_
 
 ## Configuration
 1. Environments
@@ -36,18 +36,16 @@
 - `/snap-build` (prerender build)
 
 ## Todos
-2. Multilingual page detail view
-3. Highlight view
-- click highlight
-4. Preview page (book, music, etc)
-5. Enhance music filter (multiple firstChar, removeable firstChar)
-6. Add book: Shijing
-7. Add book: Shujing
-8. Add book: Yijing
-9. Add book: Lijing
-10. Add book: Chunqiujing
-11. Add prayer letter
-12. Add media -> hyperlink to medium
+1. Multilingual page detail view
+2. Preview page (book, music, etc)
+3. Enhance music filter (multiple firstChar, removeable firstChar)
+4. Add book: Shijing
+5. Add book: Shujing
+6. Add book: Yijing
+7. Add book: Lijing
+8. Add book: Chunqiujing
+9. Add prayer letter
+10. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now

@@ -86,6 +86,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
       return
     }
 
+    setHighlight(new Set([]))
     setChapter((prevState) => {
       return {
         ...prevState,
@@ -94,22 +95,36 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
     })
   }
 
+  function toggleHighlight(sectionId: string) {
+    setHighlight((prevState) => {
+      const newHighlight = new Set(prevState.values())
+
+      if (newHighlight.has(sectionId)) {
+        newHighlight.delete(sectionId)
+      } else {
+        newHighlight.add(sectionId)
+      }
+      return newHighlight
+    })
+  }
+
   React.useEffect(() => {
     const sectionIds = hash.replace("#", "").split(",")
     if (!Array.isArray(sectionIds) || sectionIds.length === 0) {
+      setHighlight(new Set([]))
       return
     }
 
     setHighlight((prevState) => {
-      prevState.clear()
+      const newHighlight = new Set(prevState.values())
 
       sectionIds.forEach((sectionId) => {
-        prevState.add(sectionId)
+        newHighlight.add(`book/${chapter.detail?.book?.slug}/${chapter.detail?.slug}/${sectionId}`)
       })
 
-      return prevState
+      return newHighlight
     })
-  }, [hash])
+  }, [hash, chapter])
 
   React.useEffect(() => {
     if (!book) {
@@ -232,10 +247,11 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                         chapter.detail.sections.map((section, i: number) => {
                           return (
                             <React.Fragment key={`section-${i}`}>
-                              <li id={section.slug} className={`scroll-my-20 `}>
+                              <li id={section.slug} className={`scroll-my-20 cursor-pointer`}
+                                onClick={() => { toggleHighlight(`book/${chapter.detail?.book?.slug}/${chapter.detail?.slug}/${section.slug}`) }}>
                                 <div dangerouslySetInnerHTML={{
                                   __html: section.content || ""
-                                }} className={(highlight.has(section.slug) ? "bg-book-highlight text-white p-2 rounded" : "")}>
+                                }} className={(highlight.has(`book/${chapter.detail?.book?.slug}/${chapter.detail?.slug}/${section.slug}`) ? "bg-book-highlight text-white p-2 rounded" : "")}>
 
                                 </div>
                               </li>
