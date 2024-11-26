@@ -13,9 +13,11 @@
 |--|--|--|
 | VITE_PORT | vite development port | 551 |
 | VITE_PREVIEW_PORT | vite preview port (used for `npm run preview`) | 479 |
-| VITE_PUBLIC_URL | application url without end slashes | https://confucius.github.io |
-| VITE_API_HOST | api host url without end slashes | https://confucius.github.io |
+| VITE_PUBLIC_URL | application url without end slashes | https://confucius-id.github.io |
+| VITE_API_HOST | api host url without end slashes | https://confucius-id.github.io |
 | VITE_GOOGLE_ANALYTICS_ID | google analytic/tag manager id | GA-23XYZ |
+| VITE_TAWK_PROPERTY_ID | tawk property id | 0109ldid91uf01ur8918 |
+| VITE_TAWK_WIDGET_ID | tawk widget id | 109fja92 |
 
 ## Development
 ### Starting the app
@@ -39,10 +41,10 @@
 1. Multilingual page detail view
 2. Preview page (book, music, etc)
 3. Enhance music filter (multiple firstChar, removeable firstChar)
-4. Add book: Shijing
+4. Add book: Lijing
 5. Add book: Shujing
-6. Add book: Yijing
-7. Add book: Lijing
+6. Add book: Shijing
+7. Add book: Yijing
 8. Add book: Chunqiujing
 9. Add prayer letter
 10. Add media -> hyperlink to medium
