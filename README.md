@@ -43,7 +43,9 @@
 
 1. Multilingual page detail view
 2. Preview page (book, music, etc)
-3. Enhance music filter (multiple firstChar, removeable firstChar)
+3. Enhance music filter
+- multiple firstChar
+- removeable firstChar
 4. Add book: Shujing
 5. Add book: Shijing
 6. Add book: Yijing
@@ -56,6 +58,17 @@ Nothing to have right now
 
 ## Issues
 No issues right now
+
+## Notes
+1. Lun Yu difference
+
+Lun Yu X (Xiang Dang)
+https://ctext.org/analects/xiang-dang
+
+Ctext = 18
+Matakin = 27
+
+2. Continue: Li Jing XVII:1
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
