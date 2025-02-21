@@ -68,7 +68,7 @@ https://ctext.org/analects/xiang-dang
 Ctext = 18
 Matakin = 27
 
-2. Continue: Li Jing XVII:1
+2. Continue: Li Jing XXII:1
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
