@@ -126,6 +126,18 @@ export class MusicService {
         })
       }
 
+      musics = musics.sort((a, b) => {
+        const valA = a.title.toLowerCase()
+        const valB = b.title.toLowerCase()
+        if (valA < valB) {
+          return -1
+        }
+        if (valA > valB) {
+          return 1
+        }
+        return 0
+      })
+
       const totalItems = musics.length
 
       if (page && Number.isInteger(page) && total_items && Number.isInteger(total_items)) {
