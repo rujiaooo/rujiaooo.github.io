@@ -15,8 +15,8 @@ Yea, let there be daily renovation..
 |--|--|--|
 | VITE_PORT | vite development port | 551 |
 | VITE_PREVIEW_PORT | vite preview port (used for `npm run preview`) | 479 |
-| VITE_PUBLIC_URL | application url without end slashes | https://rujiaoo.github.io |
-| VITE_API_HOST | api host url without end slashes | https://rujiaoo.github.io |
+| VITE_PUBLIC_URL | application url without end slashes | https://rujiaooo.github.io |
+| VITE_API_HOST | api host url without end slashes | https://rujiaooo.github.io |
 | VITE_GOOGLE_ANALYTICS_ID | google analytic/tag manager id | GA-23XYZ |
 | VITE_TAWK_PROPERTY_ID | tawk property id | 0109ldid91uf01ur8918 |
 | VITE_TAWK_WIDGET_ID | tawk widget id | 109fja92 |
