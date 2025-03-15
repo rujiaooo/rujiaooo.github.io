@@ -40,18 +40,17 @@ Yea, let there be daily renovation..
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Change mengzi slug
-2. Multilingual page detail view
-3. Preview page (book, music, etc)
-4. Enhance music filter
+1. Add book: Shujing
+2. Add book: Shijing
+3. Add book: Yijing
+4. Add book: Chunqiujing
+5. Multilingual page detail view
+6. Preview page (book, music, etc)
+7. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-5. Add book: Shujing
-6. Add book: Shijing
-7. Add book: Yijing
-8. Add book: Chunqiujing
-9. Add prayer letter
-10. Add media -> hyperlink to medium
+8. Add prayer letter
+9. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now
