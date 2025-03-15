@@ -18,5 +18,9 @@
     "mengzi": {
         "name": "Meng Zi",
         "description": "Kitab Bing Cu"
+    },
+    "lijing": {
+        "name": "Li Jing",
+        "description": "Kitab Kesusilaan"
     }
 }

@@ -10,6 +10,7 @@ import {
   ACTION_FAILED,
   UNEXPECTED_ERROR,
 } from "../Status"
+import { toPlain } from "../../valueconv"
 import { lngs } from "../../assets/locales"
 
 type Item = {
@@ -115,8 +116,6 @@ export class SearchService {
   }
 
   private async indexDocuments(doc: FlexSearch.Document<unknown, string[]>) {
-    const div = document.createElement("div")
-
     for (const lng of lngs) {
       const searchMusic = await this.musicService.SearchMusic({
         lng
@@ -136,7 +135,7 @@ export class SearchService {
             entity: `music`,
             slug: `${music.slug}`,
             title: `${music.title}`,
-            description: `${removeHtmlTag(div, music.content)}`,
+            description: `${toPlain(music.content)}`,
           })
         }
       }
@@ -148,7 +147,7 @@ export class SearchService {
           entity: `book`,
           slug: `${book.slug}`,
           title: `${book.name}`,
-          description: `${removeHtmlTag(div, book.description)}`,
+          description: `${toPlain(book.description)}`,
         })
 
         for (const chapter of book.chapters) {
@@ -158,7 +157,7 @@ export class SearchService {
             entity: `book`,
             slug: `${book.slug}/${chapter.slug}`,
             title: `${chapter.title}`,
-            description: `${removeHtmlTag(div, chapter.content)}`,
+            description: `${toPlain(chapter.content)}`,
           })
 
           for (const section of chapter.sections) {
@@ -168,7 +167,7 @@ export class SearchService {
               entity: `book`,
               slug: `${book.slug}/${chapter.slug}#${section.slug}`,
               title: `${section.title}`,
-              description: `${removeHtmlTag(div, section.content)}`,
+              description: `${toPlain(section.content)}`,
             })
           }
         }
@@ -176,14 +175,4 @@ export class SearchService {
     }
   }
 
-}
-
-function removeHtmlTag(div: HTMLDivElement, content?: string): string {
-  if (!content) {
-    return ""
-  }
-
-  div.innerHTML = content.replace("<br />", " ")
-
-  return div.textContent || div.innerText || ""
 }

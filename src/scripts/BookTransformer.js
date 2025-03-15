@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import book from "../assets/data/xiaojing.json" assert { type: "json" }
+import book from "../assets/data/lijing.json" assert { type: "json" }
 import fs from "fs"
 
 function main() {

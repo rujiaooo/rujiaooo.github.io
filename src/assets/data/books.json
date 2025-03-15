@@ -28,5 +28,11 @@
         "name": "Meng Zi",
         "description": "Kitab Bing Cu",
         "icon": "/image/mengzi-icon.svg"
+    },
+    {
+        "slug": "lijing",
+        "name": "Li Jing",
+        "description": "Kitab Kesusilaan",
+        "icon": "/image/lijing-icon.svg"
     }
 ]

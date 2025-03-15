@@ -9,8 +9,8 @@ import { router } from "./routes"
 import "./App.css"
 
 const meta = {
-  titleTemplate: "ConfuciusID - %s",
-  titleFallback: "ConfuciusID",
+  titleTemplate: "Ru Jiao - %s",
+  titleFallback: "Ru Jiao",
   descriptionFallback: "Ada pendidikan tiada perbedaan",
   keywordsFallback: "confucius, kongzi, khonghucu, indonesia, chinese, religion, philosophy",
   typeFallback: "website",
@@ -19,7 +19,7 @@ const meta = {
   markupSchemaFallback: {
     "@context": "https://schema.org",
     "@type": "Website",
-    "name": "ConfuciusID",
+    "name": "Ru Jiao",
     "image": "https://confucius.github.io/image/confucius-logo.png",
     "@id": "https://confucius.github.io/",
     "url": "https://confucius.github.io/",

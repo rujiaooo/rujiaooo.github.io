@@ -7,9 +7,10 @@ import { Meta } from "../components/Meta"
 import { useAutoPosition, useHashFragment } from "../hooks"
 import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
+import { PrevNext } from "../features/Navigation"
 import { MusicService } from "../services/static/Music"
 import { Status, StatusCode } from "../services/Status"
-import { PrevNext } from "../features/Navigation"
+import { toPlain } from "../valueconv"
 
 type MusicDetailProps = {
   lng?: string
@@ -149,7 +150,7 @@ export default function MusicDetail(props: MusicDetailProps): React.JSX.Element 
           <Meta>
             {{
               title: music.detail?.title || "",
-              description: music.detail?.content || "",
+              description: toPlain(music.detail?.content),
             }}
           </Meta>
 

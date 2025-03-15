@@ -18,5 +18,9 @@
     "mengzi": {
         "name": "Meng Zi",
         "description": "The Works of Mencius"
+    },
+    "lijing": {
+        "name": "Li Jing",
+        "description": "Classic of Rites"
     }
 }

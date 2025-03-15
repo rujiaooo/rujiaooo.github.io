@@ -18,5 +18,9 @@
     "mengzi": {
         "name": "Meng Zi",
         "description": "孟子"
+    },
+    "lijing": {
+        "name": "Li Jing",
+        "description": "禮經"
     }
 }
