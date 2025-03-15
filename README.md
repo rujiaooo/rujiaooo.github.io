@@ -2,9 +2,11 @@
 
 **Education for all**
 
-> _If you can one day renovate yourself, do so from day to day._
-> _Yea, let there be daily renovation.._
-> _~Da Xue III:4_
+```
+If you can one day renovate yourself, do so from day to day.
+Yea, let there be daily renovation..
+~Da Xue III:4
+```
 
 ## Configuration
 1. Environments
@@ -38,20 +40,18 @@
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Add book: Lijing
-2. Change mengzi slug
-
-1. Multilingual page detail view
-2. Preview page (book, music, etc)
-3. Enhance music filter
+1. Change mengzi slug
+2. Multilingual page detail view
+3. Preview page (book, music, etc)
+4. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-4. Add book: Shujing
-5. Add book: Shijing
-6. Add book: Yijing
-7. Add book: Chunqiujing
-8. Add prayer letter
-9. Add media -> hyperlink to medium
+5. Add book: Shujing
+6. Add book: Shijing
+7. Add book: Yijing
+8. Add book: Chunqiujing
+9. Add prayer letter
+10. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now
@@ -67,8 +67,6 @@ https://ctext.org/analects/xiang-dang
 
 Ctext = 18
 Matakin = 27
-
-2. Continue: Li Jing XXII:1
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
