@@ -14,7 +14,7 @@ const meta = {
   descriptionFallback: "Ada pendidikan tiada perbedaan",
   keywordsFallback: "confucius, kongzi, khonghucu, indonesia, chinese, religion, philosophy",
   typeFallback: "website",
-  urlFallback: window.location.href,
+  urlFallback: `${import.meta.env.VITE_PUBLIC_URL}${window.location.pathname}`,
   imageFallback: `${import.meta.env.VITE_PUBLIC_URL}/image/confucius-meta.png`,
   markupSchemaFallback: {
     "@context": "https://schema.org",
