@@ -66,6 +66,7 @@ https://ctext.org/analects/xiang-dang
 
 Ctext = 18
 Matakin = 27
+Wengu Zhixin = 27
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
