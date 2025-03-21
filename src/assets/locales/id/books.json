@@ -19,6 +19,10 @@
         "name": "Meng Zi",
         "description": "Kitab Bing Cu"
     },
+    "shijing": {
+        "name": "Shi Jing",
+        "description": "Kitab Sanjak"
+    },
     "lijing": {
         "name": "Li Jing",
         "description": "Kitab Kesusilaan"

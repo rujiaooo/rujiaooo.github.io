@@ -19,6 +19,10 @@
         "name": "Meng Zi",
         "description": "孟子"
     },
+    "shijing": {
+        "name": "Shi Jing",
+        "description": "詩經"
+    },
     "lijing": {
         "name": "Li Jing",
         "description": "禮經"

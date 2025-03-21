@@ -19,6 +19,10 @@
         "name": "Meng Zi",
         "description": "The Works of Mencius"
     },
+    "shijing": {
+        "name": "Shi Jing",
+        "description": "Classic of Poetry"
+    },
     "lijing": {
         "name": "Li Jing",
         "description": "Classic of Rites"

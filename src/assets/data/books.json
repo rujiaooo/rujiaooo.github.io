@@ -30,6 +30,12 @@
         "icon": "/image/mengzi-icon.svg"
     },
     {
+        "slug": "shijing",
+        "name": "Shi Jing",
+        "description": "Kitab Sanjak",
+        "icon": "/image/shijing-icon.svg"
+    },
+    {
         "slug": "lijing",
         "name": "Li Jing",
         "description": "Kitab Kesusilaan",
