@@ -4,5 +4,6 @@
     "metaUnexpectedTitle": "Oops, galat tidak terduga",
     "infoNotFoundTitle": "404",
     "infoNotFoundDescription": "Oops, bagian buku tidak ditemukan",
-    "infoNotFoundActionText": "Kembali Beranda"
+    "infoNotFoundActionText": "Kembali Beranda",
+    "contentNoteLabel": "Catatan"
 }
