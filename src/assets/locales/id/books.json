@@ -1,6 +1,6 @@
 {
     "xiaojing": {
-        "name": "Xiaojing",
+        "name": "Xiao Jing",
         "description": "Kitab Bakti"
     },
     "daxue": {
@@ -18,6 +18,10 @@
     "mengzi": {
         "name": "Meng Zi",
         "description": "Kitab Bing Cu"
+    },
+    "shijing": {
+        "name": "Shi Jing",
+        "description": "Kitab Sanjak"
     },
     "lijing": {
         "name": "Li Jing",

@@ -4,5 +4,6 @@
     "metaUnexpectedTitle": "Oops, unexpected error happened",
     "infoNotFoundTitle": "404",
     "infoNotFoundDescription": "Oops, book chapter not found!",
-    "infoNotFoundActionText": "Back to Home"
+    "infoNotFoundActionText": "Back to Home",
+    "contentNoteLabel": "Note"
 }

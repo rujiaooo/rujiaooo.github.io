@@ -4,5 +4,6 @@
     "metaUnexpectedTitle": "发生意外错误",
     "infoNotFoundTitle": "404",
     "infoNotFoundDescription": "哎呀，未找到书籍章节！",
-    "infoNotFoundActionText": "返回首页"
+    "infoNotFoundActionText": "返回首页",
+    "contentNoteLabel": "笔记"
 }

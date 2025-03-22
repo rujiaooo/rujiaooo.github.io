@@ -19,6 +19,7 @@ import daxueSources from "../../assets/data/daxue.json"
 import zhongyongSources from "../../assets/data/zhongyong.json"
 import lunyuSources from "../../assets/data/lunyu.json"
 import mengziSources from "../../assets/data/mengzi.json"
+import shijingSources from "../../assets/data/shijing.json"
 import lijingSources from "../../assets/data/lijing.json"
 
 type BookItem = {
@@ -84,6 +85,7 @@ export class BookService {
             ...section,
             description: section.description ? he.decode(section.description) : undefined,
             content: section.content ? he.decode(section.content) : undefined,
+            note: section.note ? he.decode(section.note) : undefined,
           }
         })
       }
@@ -100,6 +102,7 @@ export class BookService {
             ...section,
             description: section.description ? he.decode(section.description) : undefined,
             content: section.content ? he.decode(section.content) : undefined,
+            note: section.note ? he.decode(section.note) : undefined,
           }
         })
       }
@@ -136,6 +139,23 @@ export class BookService {
         })
       }
     }))
+    chapters.set("shijing", shijingSources.chapters.map((chapter) => {
+      return {
+        slug: chapter.slug,
+        title: chapter.title,
+        description: chapter.description ? he.decode(chapter.description) : undefined,
+        content: chapter.content ? he.decode(chapter.content) : undefined,
+        summary: chapter.summary ? he.decode(chapter.summary) : undefined,
+        sections: chapter.sections.map((section) => {
+          return {
+            ...section,
+            description: section.description ? he.decode(section.description) : undefined,
+            content: section.content ? he.decode(section.content) : undefined,
+            note: section.note ? he.decode(section.note) : undefined,
+          }
+        })
+      }
+    }))
     chapters.set("lijing", lijingSources.chapters.map((chapter) => {
       return {
         slug: chapter.slug,
@@ -148,6 +168,7 @@ export class BookService {
             ...section,
             description: section.description ? he.decode(section.description) : undefined,
             content: section.content ? he.decode(section.content) : undefined,
+            note: section.note ? he.decode(section.note) : undefined,
           }
         })
       }
@@ -216,6 +237,9 @@ export class BookService {
                         undefined,
                       content: section.content ?
                         he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.content`, { lng, ns: [book.slug] })) :
+                        undefined,
+                      note: section.note ?
+                        he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.note`, { lng, ns: [book.slug] })) :
                         undefined,
                     }
                   })
@@ -287,6 +311,9 @@ export class BookService {
                     undefined,
                   content: section.content ?
                     he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.content`, { lng, ns: [book.slug] })) :
+                    undefined,
+                  note: section.note ?
+                    he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.note`, { lng, ns: [book.slug] })) :
                     undefined,
                 }
               })
@@ -368,6 +395,9 @@ export class BookService {
                 undefined,
               content: section.content ?
                 he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.content`, { lng, ns: [book.slug] })) :
+                undefined,
+              note: section.note ?
+                he.decode(this.translator.translate(`${book.slug}:chapters.${chapter.slug}.sections.${section.slug}.note`, { lng, ns: [book.slug] })) :
                 undefined,
             }
           }),

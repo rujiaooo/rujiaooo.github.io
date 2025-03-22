@@ -1,6 +1,6 @@
 {
     "xiaojing": {
-        "name": "Xiaojing",
+        "name": "Xiao Jing",
         "description": "孝經"
     },
     "daxue": {
@@ -18,6 +18,10 @@
     "mengzi": {
         "name": "Meng Zi",
         "description": "孟子"
+    },
+    "shijing": {
+        "name": "Shi Jing",
+        "description": "詩經"
     },
     "lijing": {
         "name": "Li Jing",
