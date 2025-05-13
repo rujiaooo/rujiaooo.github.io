@@ -56,7 +56,7 @@ async function main() {
     const { en, zh } = await scrapePage(page, chapterUrl)
 
     console.log(`Parsing ${title}`)
-    sections[no] = {
+    sections[no.toLowerCase()] = {
       en: parseSections(en, title),
       zh: parseSections(zh, title),
     }
