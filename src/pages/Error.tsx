@@ -1,11 +1,11 @@
 import * as React from "react"
 import { useLocation, useRouteError, isRouteErrorResponse } from "react-router-dom"
-import { Info } from "../features/Page"
 import { Meta } from "../components/Meta"
 import { Container } from "../components/Container"
-import { Status, StatusCode } from "../services/Status"
+import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
 import { usePage } from "../hooks"
+import { Status, StatusCode } from "../services/Status"
 
 export default function ErrorPage(): React.JSX.Element {
   const { lng } = usePage()

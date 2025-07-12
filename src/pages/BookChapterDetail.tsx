@@ -6,10 +6,10 @@ import { Meta } from "../components/Meta"
 import { useAutoPosition, useHashFragment } from "../hooks"
 import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
-import { BookService } from "../services/static/Book"
-import { Status, StatusCode } from "../services/Status"
 import { PrevNext } from "../features/Navigation"
 import { ButtonLink } from "../components/Button"
+import { Status, StatusCode } from "../services/Status"
+import { Service } from "../services/Service"
 
 type BookChapterDetailProps = {
   lng?: string
@@ -41,7 +41,7 @@ type Section = {
   note?: string
 }
 
-const bookService = new BookService()
+const { bookService } = Service.createService()
 
 export default function BookChapterDetail(props: BookChapterDetailProps): React.JSX.Element {
   const {

@@ -8,8 +8,8 @@ import { useAutoPosition, useHashFragment } from "../hooks"
 import { Info } from "../features/Page"
 import { useTranslator } from "../features/Translation"
 import { PrevNext } from "../features/Navigation"
-import { MusicService } from "../services/static/Music"
 import { Status, StatusCode } from "../services/Status"
+import { Service } from "../services/Service"
 import { toPlain } from "../valueconv"
 
 type MusicDetailProps = {
@@ -43,7 +43,7 @@ type Honor = {
   caller: string
 }
 
-const musicService = new MusicService()
+const { musicService } = Service.createService()
 
 export default function MusicDetail(props: MusicDetailProps): React.JSX.Element {
   const {

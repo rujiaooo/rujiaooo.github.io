@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Info } from "../features/Page"
 import { Meta } from "../components/Meta"
-import { useAutoPosition } from "../hooks"
 import { useTranslator } from "../features/Translation"
+import { useAutoPosition } from "../hooks"
 
 type NotFoundProps = {
   lng?: string

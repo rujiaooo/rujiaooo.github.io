@@ -6,8 +6,8 @@ import { Meta } from "../components/Meta"
 import { Link } from "../components/Router"
 import { useAutoPosition, useHashFragment } from "../hooks"
 import { useTranslator } from "../features/Translation"
-import { BookService } from "../services/static/Book"
 import { SearchBookParam } from "../services/Book"
+import { Service } from "../services/Service"
 
 type BookProps = {
   lng?: string
@@ -20,7 +20,7 @@ type Book = {
   description?: string
 }
 
-const bookService = new BookService()
+const { bookService } = Service.createService()
 
 export default function Book(props: BookProps): React.JSX.Element {
   const {
