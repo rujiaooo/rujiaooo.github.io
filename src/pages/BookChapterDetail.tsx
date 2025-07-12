@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useParams, useLocation } from "react-router-dom"
+import { FaInfoCircle } from "react-icons/fa"
 import { Container } from "../components/Container"
 import { Meta } from "../components/Meta"
 import { useAutoPosition, useHashFragment } from "../hooks"
@@ -156,12 +157,12 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
             {{
               title: (
                 chapter.error.Is(StatusCode.RESOURCE_NOTFOUND) ?
-                  translate(`book-detail:metaNotFoundTitle`, { ns: ["book-detail"] }) :
-                  translate(`book-detail:metaUnexpectedTitle`, { ns: ["book-detail"] })
+                  translate(`book-chapter-detail:metaNotFoundTitle`, { ns: ["book-chapter-detail"] }) :
+                  translate(`book-chapter-detail:metaUnexpectedTitle`, { ns: ["book-chapter-detail"] })
               ),
               description: (
                 chapter.error.Is(StatusCode.RESOURCE_NOTFOUND) ?
-                  translate(`book-detail:metaNotFoundDescription`, { ns: ["book-detail"] }) :
+                  translate(`book-chapter-detail:metaNotFoundDescription`, { ns: ["book-chapter-detail"] }) :
                   chapter.error.message
               ),
             }}
@@ -170,15 +171,15 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
           <Info
             title={
               chapter.error.Is(StatusCode.RESOURCE_NOTFOUND) ?
-                translate(`book-detail:infoNotFoundTitle`, { ns: ["book-detail"] }) :
+                translate(`book-chapter-detail:infoNotFoundTitle`, { ns: ["book-chapter-detail"] }) :
                 `${chapter.error.code}`
             }
             subtitle={
               chapter.error.Is(StatusCode.RESOURCE_NOTFOUND) ?
-                translate(`book-detail:infoNotFoundDescription`, { ns: ["book-detail"] }) :
+                translate(`book-chapter-detail:infoNotFoundDescription`, { ns: ["book-chapter-detail"] }) :
                 chapter.error.message
             }
-            actionText={translate(`book-detail:infoNotFoundActionText`, { ns: ["book-detail"] })} />
+            actionText={translate(`book-chapter-detail:infoNotFoundActionText`, { ns: ["book-chapter-detail"] })} />
         </>
       }
 
@@ -255,6 +256,20 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
 
                                 </div>
                               </li>
+                              {
+                                section.note &&
+                                <div className="flex flex-col">
+                                  <div className="flex flex-row flex-wrap gap-1 justify-start items-center">
+                                    <FaInfoCircle className="w-4 h-4 text-gray-400" aria-hidden="true" />
+                                    <p className="font-medium text-base">{translate(`book-chapter-detail:contentNoteLabel`, { ns: ["book-chapter-detail"] })}: </p>
+                                  </div>
+                                  <div dangerouslySetInnerHTML={{
+                                    __html: section.note
+                                  }} className="italic">
+
+                                  </div>
+                                </div>
+                              }
                             </React.Fragment>
                           )
                         })

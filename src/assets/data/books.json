@@ -1,7 +1,7 @@
 [
     {
         "slug": "xiaojing",
-        "name": "Xiaojing",
+        "name": "Xiao Jing",
         "description": "Kitab Bakti",
         "icon": "/image/xiaojing-icon.svg"
     },
@@ -28,6 +28,12 @@
         "name": "Meng Zi",
         "description": "Kitab Bing Cu",
         "icon": "/image/mengzi-icon.svg"
+    },
+    {
+        "slug": "shijing",
+        "name": "Shi Jing",
+        "description": "Kitab Sanjak",
+        "icon": "/image/shijing-icon.svg"
     },
     {
         "slug": "lijing",

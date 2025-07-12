@@ -40,18 +40,19 @@ Yea, let there be daily renovation..
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Change mengzi slug
-2. Multilingual page detail view
-3. Preview page (book, music, etc)
-4. Enhance music filter
+1. Sitemap generator
+2. Thumbnail generator for each pages
+3. Search on submit not on change
+4. Multilingual page detail view
+5. Preview page (book, music, etc)
+6. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-5. Add book: Shujing
-6. Add book: Shijing
-7. Add book: Yijing
-8. Add book: Chunqiujing
-9. Add prayer letter
-10. Add media -> hyperlink to medium
+7. Add book: Shujing
+8. Add book: Yijing
+9. Add book: Chunqiujing
+10. Add prayer letter
+11. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now
@@ -67,6 +68,7 @@ https://ctext.org/analects/xiang-dang
 
 Ctext = 18
 Matakin = 27
+Wengu Zhixin = 27
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)

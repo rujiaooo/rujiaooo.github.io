@@ -1,6 +1,6 @@
 {
     "xiaojing": {
-        "name": "Xiaojing",
+        "name": "Xiao Jing",
         "description": "The Classic of Filial Piety"
     },
     "daxue": {
@@ -18,6 +18,10 @@
     "mengzi": {
         "name": "Meng Zi",
         "description": "The Works of Mencius"
+    },
+    "shijing": {
+        "name": "Shi Jing",
+        "description": "Classic of Poetry"
     },
     "lijing": {
         "name": "Li Jing",

@@ -2,76 +2,61 @@ import puppeteer from "puppeteer"
 import fs from "fs"
 import he from "html-entities"
 
-const lijingChapters = [
-  "https://ctext.org/liji/qu-li-i",
-  "https://ctext.org/liji/qu-li-ii",
-  "https://ctext.org/liji/tan-gong-i",
-  "https://ctext.org/liji/tan-gong-ii",
-  "https://ctext.org/liji/wang-zhi",
-  "https://ctext.org/liji/yue-ling",
-  "https://ctext.org/liji/zengzi-wen",
-  "https://ctext.org/liji/wen-wang-shi-zi",
-  "https://ctext.org/liji/li-yun",
-  "https://ctext.org/liji/li-qi",
-  "https://ctext.org/liji/jiao-te-sheng",
-  "https://ctext.org/liji/nei-ze",
-  "https://ctext.org/liji/yu-zao",
-  "https://ctext.org/liji/ming-tang-wei",
-  "https://ctext.org/liji/sang-fu-xiao-ji",
-  "https://ctext.org/liji/da-zhuan",
-  "https://ctext.org/liji/shao-yi",
-  "https://ctext.org/liji/xue-ji",
-  "https://ctext.org/liji/yue-ji",
-  "https://ctext.org/liji/za-ji-i",
-  "https://ctext.org/liji/za-ji-ii",
-  "https://ctext.org/liji/sang-da-ji",
-  "https://ctext.org/liji/ji-fa",
-  "https://ctext.org/liji/ji-yi",
-  "https://ctext.org/liji/ji-tong",
-  "https://ctext.org/liji/jing-jie",
-  "https://ctext.org/liji/ai-gong-wen",
-  "https://ctext.org/liji/zhongni-yan-ju",
-  "https://ctext.org/liji/kongzi-xian-ju",
-  "https://ctext.org/liji/fang-ji",
-  "https://ctext.org/liji/zhong-yong",
-  "https://ctext.org/liji/biao-ji",
-  "https://ctext.org/liji/zi-yi",
-  "https://ctext.org/liji/ben-sang",
-  "https://ctext.org/liji/wen-sang",
-  "https://ctext.org/liji/fu-wen",
-  "https://ctext.org/liji/jian-zhuan",
-  "https://ctext.org/liji/san-nian-wen",
-  "https://ctext.org/liji/shen-yi",
-  "https://ctext.org/liji/tou-hu",
-  "https://ctext.org/liji/ru-xing",
-  "https://ctext.org/liji/da-xue",
-  "https://ctext.org/liji/guan-yi",
-  "https://ctext.org/liji/hun-yi",
-  "https://ctext.org/liji/xiang-yin-jiu-yi",
-  "https://ctext.org/liji/she-yi",
-  "https://ctext.org/liji/yan-yi",
-  "https://ctext.org/liji/pin-yi",
-  "https://ctext.org/liji/sang-fu-si-zhi"
+const bookChapters = [
+  "https://ctext.org/book-of-poetry/odes-of-zhou-and-the-south",
+  "https://ctext.org/book-of-poetry/odes-of-shao-and-the-south",
+  "https://ctext.org/book-of-poetry/odes-of-bei",
+  "https://ctext.org/book-of-poetry/odes-of-yong",
+  "https://ctext.org/book-of-poetry/odes-of-wei",
+  "https://ctext.org/book-of-poetry/odes-of-wang",
+  "https://ctext.org/book-of-poetry/odes-of-zheng",
+  "https://ctext.org/book-of-poetry/odes-of-qi",
+  "https://ctext.org/book-of-poetry/odes-of-wei1",
+  "https://ctext.org/book-of-poetry/odes-of-tang",
+  "https://ctext.org/book-of-poetry/odes-of-qin",
+  "https://ctext.org/book-of-poetry/odes-of-chen",
+  "https://ctext.org/book-of-poetry/odes-of-gui",
+  "https://ctext.org/book-of-poetry/odes-of-cao",
+  "https://ctext.org/book-of-poetry/odes-of-bin",
+
+  "https://ctext.org/book-of-poetry/decade-of-lu-ming",
+  "https://ctext.org/book-of-poetry/decade-of-baihua",
+  "https://ctext.org/book-of-poetry/decade-of-tong-gong",
+  "https://ctext.org/book-of-poetry/decade-of-qi-fu",
+  "https://ctext.org/book-of-poetry/decade-of-xiao-min",
+  "https://ctext.org/book-of-poetry/decade-of-bei-shan",
+  "https://ctext.org/book-of-poetry/decade-of-sang-hu",
+  "https://ctext.org/book-of-poetry/decade-of-du-ren-shi",
+
+  "https://ctext.org/book-of-poetry/decade-of-wen-wang",
+  "https://ctext.org/book-of-poetry/decade-of-sheng-min",
+  "https://ctext.org/book-of-poetry/decade-of-dang",
+
+  "https://ctext.org/book-of-poetry/decade-of-qing-miao",
+  "https://ctext.org/book-of-poetry/decade-of-chen-gong",
+  "https://ctext.org/book-of-poetry/decade-of-min-yu-xiao-zi",
+  "https://ctext.org/book-of-poetry/praise-odes-of-lu",
+  "https://ctext.org/book-of-poetry/sacrificial-odes-of-shang",
 ]
 
 async function main() {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
-  const chapters = lijingChapters
+  const chapters = bookChapters
 
   let i = 0
   const sections = {}
   for (const chapterUrl of chapters) {
     i++
     const no = romanize(i)
-    const title = `Li Jing ${no}`
+    const title = `Shi Jing ${no}`
     console.log(`Scrapping ${title}`)
 
     const { en, zh } = await scrapePage(page, chapterUrl)
 
     console.log(`Parsing ${title}`)
-    sections[no] = {
+    sections[no.toLowerCase()] = {
       en: parseSections(en, title),
       zh: parseSections(zh, title),
     }
