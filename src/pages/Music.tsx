@@ -6,8 +6,8 @@ import { Meta } from "../components/Meta"
 import { Link } from "../components/Router"
 import { useAutoPosition, useHashFragment } from "../hooks"
 import { useTranslator } from "../features/Translation"
-import { MusicService } from "../services/static/Music"
 import { SearchMusicParam } from "../services/Music"
+import { Service } from "../services/Service"
 
 type MusicProps = {
   lng?: string
@@ -38,7 +38,7 @@ type Honor = {
   caller: string
 }
 
-const musicService = new MusicService()
+const { musicService } = Service.createService()
 
 export default function Music(props: MusicProps): React.JSX.Element {
   const {

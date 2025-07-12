@@ -11,18 +11,14 @@ import { Link } from "../components/Router"
 import { Spinner } from "../components/Spinner"
 import { useAutoPosition, useHashFragment } from "../hooks"
 import { useTranslator } from "../features/Translation"
-import { MusicService } from "../services/static/Music"
-import { BookService } from "../services/static/Book"
-import { SearchService } from "../services/static/Search"
 import { SearchItemParam, Entity } from "../services/Search"
+import { Service } from "../services/Service"
 
 type SearchProps = {
   lng?: string
 }
 
-const musicService = new MusicService()
-const bookService = new BookService()
-const searchService = new SearchService(musicService, bookService)
+const { searchService } = Service.createService()
 
 type SearchItem = {
   slug: string
