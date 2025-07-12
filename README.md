@@ -40,7 +40,7 @@ Yea, let there be daily renovation..
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Sitemap generator
+1. Add book: Shujing
 2. Thumbnail generator for each pages
 3. Search on submit not on change
 4. Multilingual page detail view
@@ -48,11 +48,10 @@ Yea, let there be daily renovation..
 6. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-7. Add book: Shujing
-8. Add book: Yijing
-9. Add book: Chunqiujing
-10. Add prayer letter
-11. Add media -> hyperlink to medium
+7. Add book: Yijing
+8. Add book: Chunqiujing
+9. Add prayer letter
+10. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now
