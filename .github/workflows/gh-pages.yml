@@ -32,6 +32,8 @@ jobs:
         echo VITE_TAWK_WIDGET_ID="${{ vars.VITE_TAWK_WIDGET_ID }}" >> .env
     - name: Build site
       run: npm run deploy:prod
+    - name: Build site
+      run: npm run prerender
     - name: Upload site
       uses: actions/upload-pages-artifact@v3
       with:
