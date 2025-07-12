@@ -2,6 +2,7 @@ import * as React from "react"
 import { useNavigate } from "react-router-dom"
 import { useSearchParams } from "react-router-dom"
 import { useDebounceValue } from "usehooks-ts"
+import Highlighter from "react-highlight-words"
 import { Alert } from "../components/Alert"
 import { Badge } from "../components/Badge"
 import { Container } from "../components/Container"
@@ -205,16 +206,10 @@ export default function Search(props: SearchProps): React.JSX.Element {
                               </div>
                               {
                                 item.description &&
-                                <Link to={`${item.url}`} dangerouslySetInnerHTML={{
-                                  __html: item.description.split(" ").reduce((prevVal, currVal, currIdx) => {
-                                    if (currIdx >= 50) {
-                                      return prevVal
-                                    }
-
-                                    return prevVal + " " + currVal
-                                  }, "")
-                                }}>
-                                </Link>
+                                <Highlighter
+                                  searchWords={[keyword]}
+                                  textToHighlight={item.description ? item.description.trim().slice(0, 500) : ""}
+                                  highlightClassName="font-semibold" />
                               }
                             </div>
                           </div>
