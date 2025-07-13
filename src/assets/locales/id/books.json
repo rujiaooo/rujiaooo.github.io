@@ -23,6 +23,10 @@
         "name": "Shi Jing",
         "description": "Kitab Sanjak"
     },
+    "shujing": {
+        "name": "Shu Jing",
+        "description": "Kitab Hikayat"
+    },
     "lijing": {
         "name": "Li Jing",
         "description": "Kitab Kesusilaan"

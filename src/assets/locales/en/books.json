@@ -23,6 +23,10 @@
         "name": "Shi Jing",
         "description": "Classic of Poetry"
     },
+    "shujing": {
+        "name": "Shu Jing",
+        "description": "Classic of Documents"
+    },
     "lijing": {
         "name": "Li Jing",
         "description": "Classic of Rites"

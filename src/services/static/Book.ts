@@ -20,6 +20,7 @@ import zhongyongSources from "../../assets/data/zhongyong.json"
 import lunyuSources from "../../assets/data/lunyu.json"
 import mengziSources from "../../assets/data/mengzi.json"
 import shijingSources from "../../assets/data/shijing.json"
+import shujingSources from "../../assets/data/shujing.json"
 import lijingSources from "../../assets/data/lijing.json"
 
 type BookItem = {
@@ -140,6 +141,23 @@ export class BookService {
       }
     }))
     chapters.set("shijing", shijingSources.chapters.map((chapter) => {
+      return {
+        slug: chapter.slug,
+        title: chapter.title,
+        description: chapter.description ? he.decode(chapter.description) : undefined,
+        content: chapter.content ? he.decode(chapter.content) : undefined,
+        summary: chapter.summary ? he.decode(chapter.summary) : undefined,
+        sections: chapter.sections.map((section) => {
+          return {
+            ...section,
+            description: section.description ? he.decode(section.description) : undefined,
+            content: section.content ? he.decode(section.content) : undefined,
+            note: section.note ? he.decode(section.note) : undefined,
+          }
+        })
+      }
+    }))
+    chapters.set("shujing", shujingSources.chapters.map((chapter) => {
       return {
         slug: chapter.slug,
         title: chapter.title,
