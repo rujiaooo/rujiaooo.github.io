@@ -5,7 +5,7 @@ import TawkMessengerReact from "@tawk.to/tawk-messenger-react"
 import { ThemeProvider } from "../Theme"
 import { MetaProvider } from "../Meta"
 import { Spinner } from "../Spinner"
-import { router } from "./routes"
+import { router } from "../../routes"
 import "./App.css"
 
 const meta = {
@@ -20,9 +20,9 @@ const meta = {
     "@context": "https://schema.org",
     "@type": "Website",
     "name": "Ru Jiao",
-    "image": "https://confucius.github.io/image/confucius-logo.png",
-    "@id": "https://confucius.github.io/",
-    "url": "https://confucius.github.io/",
+    "image": "https://rujiao.web.id/image/confucius-logo.png",
+    "@id": "https://rujiao.web.id/",
+    "url": "https://rujiao.web.id/",
     "sameAs": [
       "https://www.youtube.com/@confucius-id"
     ]
