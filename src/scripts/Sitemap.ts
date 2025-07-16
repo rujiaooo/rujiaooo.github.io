@@ -41,7 +41,7 @@ async function createSitemap({ baseUrl }: { baseUrl: string }) {
     pages.push(`/book/${book.slug}`)
 
     for (const chapter of book.chapters) {
-      pages.push(`book/${book.slug}/${chapter.slug}`)
+      pages.push(`/book/${book.slug}/${chapter.slug}`)
     }
   }
 
