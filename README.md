@@ -69,6 +69,8 @@ Ctext = 18
 Matakin = 27
 Wengu Zhixin = 27
 
+2. Continue Shu Jing VII:1
+
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
 2. [Chinese Text](https://ctext.org/)

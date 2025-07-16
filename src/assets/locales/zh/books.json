@@ -23,6 +23,10 @@
         "name": "Shi Jing",
         "description": "詩經"
     },
+    "shujing": {
+        "name": "Shu Jing",
+        "description": "書經"
+    },
     "lijing": {
         "name": "Li Jing",
         "description": "禮經"
