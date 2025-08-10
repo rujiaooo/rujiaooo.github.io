@@ -40,18 +40,20 @@ Yea, let there be daily renovation..
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Add book: Shujing
-2. Thumbnail generator for each pages
-3. Search on submit not on change
-4. Multilingual page detail view
-5. Preview page (book, music, etc)
-6. Enhance music filter
+1. Add policy & tos pages
+- https://www.rujiao.web.id/privacy-and-policy/
+- https://www.rujiao.web.id/term-of-service/
+1. Thumbnail generator for each pages (integrate with sitemap)
+2. Search on submit not on change (show default search result on search page instead of empty)
+3. Multilingual page detail view
+4. Preview page (book, music, etc)
+5. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-7. Add book: Yijing
-8. Add book: Chunqiujing
+6. Add media ([medium](https://medium.com) or [discourse](https://github.com/discourse/discourse))
+7. Add book: Yi Jing
+8. Add book: Chun Qiu Jing
 9. Add prayer letter
-10. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now
@@ -69,7 +71,7 @@ Ctext = 18
 Matakin = 27
 Wengu Zhixin = 27
 
-2. Continue Shu Jing XLIII:1
+2. Continue Shu Jing LVIII:1
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
