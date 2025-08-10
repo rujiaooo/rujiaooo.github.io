@@ -25,6 +25,8 @@ const guests: RouteProps[] = [
   { path: "/book/:book/:slug", element: <Page name="BookChapterDetail" /> },
   { path: "/contact", element: <Page name="Contact" /> },
   { path: "/search", element: <Page name="Search" /> },
+  { path: "/p/privacy-policy", element: <Page name="Privacy" /> },
+  { path: "/p/terms-of-service", element: <Page name="Term" /> },
   { path: "*", element: <NotFound /> }
 ]
 
