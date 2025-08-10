@@ -40,9 +40,9 @@ export default function Contact(props: ContactProps): React.JSX.Element {
           <ul className="flex flex-col gap-2">
             <li className="">
               Email: {" "}
-              <Link to={`mailto:confuciusindonesia@gmail.com`}
+              <Link to={`mailto:admin@rujiao.web.id`}
                 className="text-confucius-black hover:text-confucius-primary">
-                confuciusindonesia@gmail.com
+                admin@rujiao.web.id
               </Link>
             </li>
           </ul>
