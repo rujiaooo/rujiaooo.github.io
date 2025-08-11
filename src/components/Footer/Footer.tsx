@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Container } from "../Container"
+import { Link } from "../Router"
 
 type FooterProps = {
   quoteText?: string
@@ -24,6 +25,14 @@ export function Footer(props: FooterProps): React.JSX.Element {
           }
         </div>
       </Container>
+      <div className="hidden">
+        <Link to="/p/privacy-policy">
+          Privacy Policy
+        </Link>
+        <Link to="/p/terms-of-service">
+          Terms of Service
+        </Link>
+      </div>
     </footer>
   )
 }

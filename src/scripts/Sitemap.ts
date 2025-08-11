@@ -28,7 +28,9 @@ async function createSitemap({ baseUrl }: { baseUrl: string }) {
     "/music",
     "/book",
     "/contact",
-    "/search"
+    "/search",
+    "/p/privacy-policy",
+    "/p/terms-of-service",
   ]
   const pages = [
     ...bases,
