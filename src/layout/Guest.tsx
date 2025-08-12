@@ -59,7 +59,18 @@ export default function Guest(): React.JSX.Element {
         <div className="min-h-screen">
           <Outlet />
         </div>
-        <Footer quoteText={translate("footerQuoteText", { lng })} />
+        <Footer 
+          menuItems={[
+            {
+              to: "/p/privacy-policy",
+              content: "Privacy Policy"
+            },
+            {
+              to: "/p/terms-of-service",
+              content: "Terms of Service"
+            },
+          ]}
+          quoteText={translate("footerQuoteText", { lng })} />
       </div>
     </>
   )
