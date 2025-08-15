@@ -40,9 +40,6 @@ Yea, let there be daily renovation..
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Add policy & tos pages
-- https://www.rujiao.web.id/privacy-and-policy/
-- https://www.rujiao.web.id/term-of-service/
 1. Thumbnail generator for each pages (integrate with sitemap)
 2. Search on submit not on change (show default search result on search page instead of empty)
 3. Multilingual page detail view
@@ -71,7 +68,7 @@ Ctext = 18
 Matakin = 27
 Wengu Zhixin = 27
 
-2. Continue Shu Jing LVIII:1
+2. Continue Shu Jing IV:1
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
