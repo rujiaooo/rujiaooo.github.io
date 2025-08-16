@@ -3,41 +3,117 @@ import fs from "fs"
 import he from "html-entities"
 
 const bookChapters = [
-  "https://ctext.org/book-of-poetry/odes-of-zhou-and-the-south",
-  "https://ctext.org/book-of-poetry/odes-of-shao-and-the-south",
-  "https://ctext.org/book-of-poetry/odes-of-bei",
-  "https://ctext.org/book-of-poetry/odes-of-yong",
-  "https://ctext.org/book-of-poetry/odes-of-wei",
-  "https://ctext.org/book-of-poetry/odes-of-wang",
-  "https://ctext.org/book-of-poetry/odes-of-zheng",
-  "https://ctext.org/book-of-poetry/odes-of-qi",
-  "https://ctext.org/book-of-poetry/odes-of-wei1",
-  "https://ctext.org/book-of-poetry/odes-of-tang",
-  "https://ctext.org/book-of-poetry/odes-of-qin",
-  "https://ctext.org/book-of-poetry/odes-of-chen",
-  "https://ctext.org/book-of-poetry/odes-of-gui",
-  "https://ctext.org/book-of-poetry/odes-of-cao",
-  "https://ctext.org/book-of-poetry/odes-of-bin",
+  "https://ctext.org/shang-shu/canon-of-yao",
+  "https://ctext.org/shang-shu/canon-of-shun",
+  "https://ctext.org/shang-shu/counsels-of-the-great-yu",
+  "https://ctext.org/shang-shu/counsels-of-gao-yao",
+  "https://ctext.org/shang-shu/yi-and-ji",
 
-  "https://ctext.org/book-of-poetry/decade-of-lu-ming",
-  "https://ctext.org/book-of-poetry/decade-of-baihua",
-  "https://ctext.org/book-of-poetry/decade-of-tong-gong",
-  "https://ctext.org/book-of-poetry/decade-of-qi-fu",
-  "https://ctext.org/book-of-poetry/decade-of-xiao-min",
-  "https://ctext.org/book-of-poetry/decade-of-bei-shan",
-  "https://ctext.org/book-of-poetry/decade-of-sang-hu",
-  "https://ctext.org/book-of-poetry/decade-of-du-ren-shi",
+  "https://ctext.org/shang-shu/tribute-of-yu",
+  "https://ctext.org/shang-shu/speech-at-gan",
+  "https://ctext.org/shang-shu/songs-of-the-five-sons",
+  "https://ctext.org/shang-shu/punitive-expedition-of-yin",
 
-  "https://ctext.org/book-of-poetry/decade-of-wen-wang",
-  "https://ctext.org/book-of-poetry/decade-of-sheng-min",
-  "https://ctext.org/book-of-poetry/decade-of-dang",
+  "https://ctext.org/shang-shu/speech-of-tang",
+  "https://ctext.org/shang-shu/announcement-of-zhong-hui",
+  "https://ctext.org/shang-shu/announcement-of-tang",
+  "https://ctext.org/shang-shu/instructions-of-yi",
+  "https://ctext.org/shang-shu/tai-jia-i",
+  "https://ctext.org/shang-shu/tai-jia-ii",
+  "https://ctext.org/shang-shu/tai-jia-iii",
+  "https://ctext.org/shang-shu/common-possession-of-pure-virtue",
+  "https://ctext.org/shang-shu/pan-geng-i",
+  "https://ctext.org/shang-shu/pan-geng-ii",
+  "https://ctext.org/shang-shu/pan-geng-iii",
+  "https://ctext.org/shang-shu/charge-to-yue-i",
+  "https://ctext.org/shang-shu/charge-to-yue-ii",
+  "https://ctext.org/shang-shu/charge-to-yue-iii",
+  "https://ctext.org/shang-shu/day-of-the-supplementary-sacrifice-to",
+  "https://ctext.org/shang-shu/chief-of-the-wests-conquest-of-li",
+  "https://ctext.org/shang-shu/count-of-wei",
 
-  "https://ctext.org/book-of-poetry/decade-of-qing-miao",
-  "https://ctext.org/book-of-poetry/decade-of-chen-gong",
-  "https://ctext.org/book-of-poetry/decade-of-min-yu-xiao-zi",
-  "https://ctext.org/book-of-poetry/praise-odes-of-lu",
-  "https://ctext.org/book-of-poetry/sacrificial-odes-of-shang",
+  "https://ctext.org/shang-shu/great-declaration-i",
+  "https://ctext.org/shang-shu/great-declaration-ii",
+  "https://ctext.org/shang-shu/great-declaration-iii",
+  "https://ctext.org/shang-shu/speech-at-mu",
+  "https://ctext.org/shang-shu/successful-completion-of-the-war",
+  "https://ctext.org/shang-shu/great-plan",
+  "https://ctext.org/shang-shu/hounds-of-lu",
+  "https://ctext.org/shang-shu/metal-bound-coffer",
+  "https://ctext.org/shang-shu/great-announcement",
+  "https://ctext.org/shang-shu/charge-to-the-count-of-wei",
+  "https://ctext.org/shang-shu/announcement-to-the-prince-of-kang",
+  "https://ctext.org/shang-shu/announcement-about-drunkenness",
+  "https://ctext.org/shang-shu/timber-of-the-rottlera",
+  "https://ctext.org/shang-shu/announcement-of-the-duke-of-shao",
+  "https://ctext.org/shang-shu/announcement-concerning-luo",
+  "https://ctext.org/shang-shu/numerous-officers",
+  "https://ctext.org/shang-shu/against-luxurious-ease",
+  "https://ctext.org/shang-shu/prince-shi",
+  "https://ctext.org/shang-shu/charge-to-zhong-of-cai",
+  "https://ctext.org/shang-shu/numerous-regions",
+  "https://ctext.org/shang-shu/establishment-of-government",
+  "https://ctext.org/shang-shu/officers-of-zhou",
+  "https://ctext.org/shang-shu/jun-chen",
+  "https://ctext.org/shang-shu/testamentary-charge",
+  "https://ctext.org/shang-shu/announcement-of-king-kang",
+  "https://ctext.org/shang-shu/charge-to-the-duke-of-bi",
+  "https://ctext.org/shang-shu/kun-ya",
+  "https://ctext.org/shang-shu/charge-to-jiong",
+  "https://ctext.org/shang-shu/marquis-of-lu-on-punishments",
+  "https://ctext.org/shang-shu/charge-to-the-marquis-wen",
+  "https://ctext.org/shang-shu/speech-at-bi",
+  "https://ctext.org/shang-shu/speech-of-the-marquis-of-qin",
 ]
+
+const exclusions = new Map([
+  ["https://ctext.org/shang-shu/canon-of-yao", new Set([0])],
+  ["https://ctext.org/shang-shu/canon-of-shun", new Set([0])],
+  ["https://ctext.org/shang-shu/counsels-of-the-great-yu", new Set([0])],
+  ["https://ctext.org/shang-shu/tribute-of-yu", new Set([0])],
+  ["https://ctext.org/shang-shu/speech-at-gan", new Set([0])],
+  ["https://ctext.org/shang-shu/songs-of-the-five-sons", new Set([0])],
+  ["https://ctext.org/shang-shu/punitive-expedition-of-yin", new Set([0])],
+  ["https://ctext.org/shang-shu/speech-of-tang", new Set([0])],
+  ["https://ctext.org/shang-shu/announcement-of-zhong-hui", new Set([0])],
+  ["https://ctext.org/shang-shu/announcement-of-tang", new Set([0])],
+  ["https://ctext.org/shang-shu/instructions-of-yi", new Set([0])],
+  ["https://ctext.org/shang-shu/tai-jia-i", new Set([0])],
+  ["https://ctext.org/shang-shu/common-possession-of-pure-virtue", new Set([1, 2, 3, 4, 5, 6])],
+  ["https://ctext.org/shang-shu/pan-geng-i", new Set([0])],
+  ["https://ctext.org/shang-shu/charge-to-yue-i", new Set([0])],
+  ["https://ctext.org/shang-shu/day-of-the-supplementary-sacrifice-to", new Set([0])],
+  ["https://ctext.org/shang-shu/chief-of-the-wests-conquest-of-li", new Set([0])],
+  ["https://ctext.org/shang-shu/count-of-wei", new Set([0])],
+  ["https://ctext.org/shang-shu/great-declaration-i", new Set([0])],
+  ["https://ctext.org/shang-shu/speech-at-mu", new Set([0])],
+  ["https://ctext.org/shang-shu/successful-completion-of-the-war", new Set([0])],
+  ["https://ctext.org/shang-shu/great-plan", new Set([0])],
+  ["https://ctext.org/shang-shu/hounds-of-lu", new Set([0])],
+  ["https://ctext.org/shang-shu/metal-bound-coffer", new Set([0])],
+  ["https://ctext.org/shang-shu/great-announcement", new Set([0])],
+  ["https://ctext.org/shang-shu/charge-to-the-count-of-wei", new Set([0])],
+  ["https://ctext.org/shang-shu/announcement-to-the-prince-of-kang", new Set([0])],
+  ["https://ctext.org/shang-shu/announcement-of-the-duke-of-shao", new Set([0])],
+  ["https://ctext.org/shang-shu/announcement-concerning-luo", new Set([0])],
+  ["https://ctext.org/shang-shu/numerous-officers", new Set([0])],
+  ["https://ctext.org/shang-shu/against-luxurious-ease", new Set([0])],
+  ["https://ctext.org/shang-shu/prince-shi", new Set([0])],
+  ["https://ctext.org/shang-shu/charge-to-zhong-of-cai", new Set([0])],
+  ["https://ctext.org/shang-shu/numerous-regions", new Set([0])],
+  ["https://ctext.org/shang-shu/establishment-of-government", new Set([0])],
+  ["https://ctext.org/shang-shu/officers-of-zhou", new Set([0])],
+  ["https://ctext.org/shang-shu/jun-chen", new Set([0])],
+  ["https://ctext.org/shang-shu/testamentary-charge", new Set([0])],
+  ["https://ctext.org/shang-shu/announcement-of-king-kang", new Set([0])],
+  ["https://ctext.org/shang-shu/charge-to-the-duke-of-bi", new Set([0])],
+  ["https://ctext.org/shang-shu/kun-ya", new Set([0])],
+  ["https://ctext.org/shang-shu/charge-to-jiong", new Set([0])],
+  ["https://ctext.org/shang-shu/marquis-of-lu-on-punishments", new Set([0])],
+  ["https://ctext.org/shang-shu/charge-to-the-marquis-wen", new Set([0])],
+  ["https://ctext.org/shang-shu/speech-at-bi", new Set([0])],
+  ["https://ctext.org/shang-shu/speech-of-the-marquis-of-qin", new Set([0])],
+])
 
 async function main() {
   const browser = await puppeteer.launch()
@@ -50,7 +126,7 @@ async function main() {
   for (const chapterUrl of chapters) {
     i++
     const no = romanize(i)
-    const title = `Shi Jing ${no}`
+    const title = `Shu Jing ${no}`
     console.log(`Scrapping ${title}`)
 
     const { en, zh } = await scrapePage(page, chapterUrl)
@@ -90,22 +166,60 @@ async function scrapePage(page, url) {
   }))
   
 
-  if (enTexts.length != zhTexts.length || enTitles.length !== zhTitles.length) {
-    console.log("Content length is not valid")
-    return
+  let resEnTexts = []
+  let resZhTexts = []
+  let resEnTitles = []
+  let resZhTitles = []
+  const isLengthSame = enTexts.length == zhTexts.length && enTitles.length === zhTitles.length
+  if (!isLengthSame) {
+    resEnTexts = enTexts
+    resZhTexts = zhTexts
+    resEnTitles = enTitles
+    resZhTitles = zhTitles
+  } else {
+    console.warn("Content length is different, URL: ", {
+      url,
+      enTexts: enTexts.length,
+      zhTexts: zhTexts.length,
+      enTitles: enTitles.length,
+      zhTitles: zhTitles.length,
+    })
+
+    for (let i = 0; i < enTexts.length; i++) {
+      if (exclusions.has(url)) {
+        const setting = exclusions.get(url)
+        console.log([i, setting, setting.has(i)])
+        if (setting.has(i)) {
+          continue
+        }
+      }
+
+      resEnTexts.push(enTexts[i])
+      resZhTexts.push(zhTexts[i])
+      resEnTitles.push(enTitles[i])
+      resZhTitles.push(zhTitles[i])
+    }
+
+    console.warn("New Content length, URL: ", {
+      url,
+      enTexts: resEnTexts.length,
+      zhTexts: resZhTexts.length,
+      enTitles: resEnTitles.length,
+      zhTitles: resZhTitles.length,
+    })
   }
 
   const enSections = []
   const zhSections = []
-  for (let i = 0; i < enTexts.length; i++) {
+  for (let i = 0; i < resEnTexts.length; i++) {
     enSections.push({
-      title: enTitles[i],
-      content: enTexts[i]
+      title: resEnTitles[i],
+      content: resEnTexts[i]
     })
 
     zhSections.push({
-      title: zhTitles[i],
-      content: zhTexts[i]
+      title: resZhTitles[i],
+      content: resZhTexts[i]
     })
   }
 

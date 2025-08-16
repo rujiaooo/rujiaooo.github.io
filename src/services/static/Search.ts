@@ -31,7 +31,7 @@ export class SearchService {
     this.musicService = musicService
     this.bookService = bookService
     this.documents = new FlexSearch.Document({
-      tokenize: "full",
+      tokenize: "strict",
       document: {
         id: "id",
         index: [

@@ -204,12 +204,12 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
 
                 <PrevNext
                   prev={{
-                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
+                    to: `${lngTo}/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
                     label: `${chapter.detail?.prev?.title}`,
                     disabled: !chapter.detail?.prev,
                   }}
                   next={{
-                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
+                    to: `${lngTo}/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
                     label: `${chapter.detail?.next?.title}`,
                     disabled: !chapter.detail?.next,
                   }}
