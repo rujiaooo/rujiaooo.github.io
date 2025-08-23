@@ -215,7 +215,7 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
                   }}
                 />
 
-                <div className="border rounded-md shadow p-4">
+                <div className="border rounded-md shadow px-4 py-8">
                   <div className="flex flex-col gap-2">
                     <p className="font-semibold text-3xl text-confucius-black">
                       {chapter.detail?.title}
