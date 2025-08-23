@@ -36,6 +36,12 @@
         "icon": "/image/shijing-icon.svg"
     },
     {
+        "slug": "shujing",
+        "name": "Shu Jing",
+        "description": "Kitab Hikayat",
+        "icon": "/image/shujing-icon.svg"
+    },
+    {
         "slug": "lijing",
         "name": "Li Jing",
         "description": "Kitab Kesusilaan",

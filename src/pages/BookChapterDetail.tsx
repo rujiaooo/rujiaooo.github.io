@@ -204,18 +204,18 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
 
                 <PrevNext
                   prev={{
-                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
+                    to: `${lngTo}/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
                     label: `${chapter.detail?.prev?.title}`,
                     disabled: !chapter.detail?.prev,
                   }}
                   next={{
-                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
+                    to: `${lngTo}/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
                     label: `${chapter.detail?.next?.title}`,
                     disabled: !chapter.detail?.next,
                   }}
                 />
 
-                <div className="border rounded-md shadow p-4">
+                <div className="border rounded-md shadow px-4 py-8">
                   <div className="flex flex-col gap-2">
                     <p className="font-semibold text-3xl text-confucius-black">
                       {chapter.detail?.title}
@@ -280,12 +280,12 @@ export default function BookChapterDetail(props: BookChapterDetailProps): React.
 
                 <PrevNext
                   prev={{
-                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
+                    to: `${lngTo}/book/${chapter.detail?.book?.slug}/${chapter.detail?.prev?.slug}`,
                     label: `${chapter.detail?.prev?.title}`,
                     disabled: !chapter.detail?.prev,
                   }}
                   next={{
-                    to: `/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
+                    to: `${lngTo}/book/${chapter.detail?.book?.slug}/${chapter.detail?.next?.slug}`,
                     label: `${chapter.detail?.next?.title}`,
                     disabled: !chapter.detail?.next,
                   }}

@@ -6,5 +6,9 @@
     "book": {
         "name": "书",
         "description": "學而時習之，不亦說乎？"
+    },
+    "forum": {
+        "name": "论坛",
+        "description": "四海之内皆兄弟"
     }
 }

@@ -40,18 +40,18 @@ Yea, let there be daily renovation..
 - `/snap-build` (prerender build)
 
 ## Todos
-1. Add book: Shujing
-2. Thumbnail generator for each pages
-3. Search on submit not on change
-4. Multilingual page detail view
+1. Thumbnail generator for each pages (integrate with sitemap)
+2. Search on submit not on change (show default search result on search page instead of empty)
+3. Multilingual page detail view
+4. Page performance optimization
+- Separate json data and translation from the build
 5. Preview page (book, music, etc)
 6. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-7. Add book: Yijing
-8. Add book: Chunqiujing
+7. Add book: Yi Jing
+8. Add book: Chun Qiu Jing
 9. Add prayer letter
-10. Add media -> hyperlink to medium
 
 ## Nice to Have
 Nothing to have right now

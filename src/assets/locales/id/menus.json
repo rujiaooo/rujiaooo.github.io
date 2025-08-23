@@ -6,5 +6,9 @@
     "book": {
         "name": "Buku",
         "description": "Belajar dan selalu dilatih tidakkah itu menyenangkan?"
+    },
+    "forum": {
+        "name": "Forum",
+        "description": "Di empat penjuru lautan semua bersaudara"
     }
 }
