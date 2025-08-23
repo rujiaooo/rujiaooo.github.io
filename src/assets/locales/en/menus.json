@@ -6,5 +6,9 @@
     "book": {
         "name": "Book",
         "description": "Is it not pleasant to learn with a constant perseverance and application?"
+    },
+    "forum": {
+        "name": "Forum",
+        "description": "The man within for seas are brother"
     }
 }

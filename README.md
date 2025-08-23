@@ -49,10 +49,9 @@ Yea, let there be daily renovation..
 6. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-7. Add media ([medium](https://medium.com) or [discourse](https://github.com/discourse/discourse))
-8. Add book: Yi Jing
-9. Add book: Chun Qiu Jing
-10. Add prayer letter
+7. Add book: Yi Jing
+8. Add book: Chun Qiu Jing
+9. Add prayer letter
 
 ## Nice to Have
 Nothing to have right now

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useNavigate } from "react-router-dom"
-import { FaMusic, FaBook } from "react-icons/fa"
+import { FaMusic, FaBook, FaRegComments } from "react-icons/fa"
 import { HiMagnifyingGlass, HiMiniSquares2X2 } from "react-icons/hi2"
 import { Button } from "../components/Button"
 import { Container } from "../components/Container"
@@ -33,11 +33,19 @@ export default function Home(props: HomeProps): React.JSX.Element {
     items: [
       {
         slug: "book",
+        to: `${lngTo}/book`,
         icon: <FaBook className="w-16 h-16" aria-hidden="true" />
       },
       {
         slug: "music",
+        to: `${lngTo}/music`,
         icon: <FaMusic className="w-16 h-16" aria-hidden="true" />
+      },
+      {
+        slug: "forum",
+        to: `https://forum.rujiao.web.id?utm_source=rujiao.web.id`,
+        isExternal: true,
+        icon: <FaRegComments className="w-16 h-16" aria-hidden="true" />
       },
     ]
   })
@@ -123,13 +131,20 @@ export default function Home(props: HomeProps): React.JSX.Element {
                     return (
                       <React.Fragment key={`menu-item-${i}`}>
                         <div className="col-span-12 md:col-span-6 lg:col-span-4">
-                          <div onClick={() => { navigate(`${lngTo}/${item.slug}`) }}
+                          <div onClick={() => { 
+                            if (item.isExternal && item.to) {
+                              window.location.href = item.to
+                              return
+                            }
+
+                            navigate(`${lngTo}/${item.slug}`) 
+                          }}
                             className="w-full h-full cursor-pointer min-h-24 shadow rounded-md border-1 bg-white px-6 xl:px-12 py-6">
                             <div className="flex flex-col justify-center items-center gap-4">
                               {item.icon}
 
                               <div className="flex flex-col justify-center items-center">
-                                <Link className="text-2xl font-semibold" to={`${lngTo}/${item.slug}`}>
+                                <Link className="text-2xl font-semibold" to={`${item.to}`}>
                                   {translate(`menus:${item.slug}.name`, { ns: ["menus"] })}
                                 </Link>
                                 <p className="text-lg text-center italic">
