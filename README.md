@@ -43,14 +43,16 @@ Yea, let there be daily renovation..
 1. Thumbnail generator for each pages (integrate with sitemap)
 2. Search on submit not on change (show default search result on search page instead of empty)
 3. Multilingual page detail view
-4. Preview page (book, music, etc)
-5. Enhance music filter
+4. Page performance optimization
+- Separate json data and translation from the build
+5. Preview page (book, music, etc)
+6. Enhance music filter
 - multiple firstChar
 - removeable firstChar
-6. Add media ([medium](https://medium.com) or [discourse](https://github.com/discourse/discourse))
-7. Add book: Yi Jing
-8. Add book: Chun Qiu Jing
-9. Add prayer letter
+7. Add media ([medium](https://medium.com) or [discourse](https://github.com/discourse/discourse))
+8. Add book: Yi Jing
+9. Add book: Chun Qiu Jing
+10. Add prayer letter
 
 ## Nice to Have
 Nothing to have right now
@@ -67,8 +69,6 @@ https://ctext.org/analects/xiang-dang
 Ctext = 18
 Matakin = 27
 Wengu Zhixin = 27
-
-2. Continue Shu Jing LI:1
 
 ## References:
 1. [MATAKIN](https://matakin.or.id/)
