@@ -53,6 +53,23 @@ Yea, let there be daily renovation..
 8. Add book: Chun Qiu Jing
 9. Add prayer letter
 
+## Books Runthrough
+1. Xiao Jing
+
+2. Da Xue
+
+3. Zhong Yong
+- Zhong Yong XVI
+- Zhong Yong XIX
+
+4. Lun Yu
+
+5. Meng Zi
+
+6. Shi Jing
+
+7. Li Jing
+
 ## Nice to Have
 Nothing to have right now
 
